@@ -1,0 +1,1 @@
+export { ParallelEquivalenceCalculator } from './component';

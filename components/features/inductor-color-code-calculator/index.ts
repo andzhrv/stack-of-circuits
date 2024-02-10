@@ -1,0 +1,1 @@
+export { InductorColorCodeCalculator } from './component';

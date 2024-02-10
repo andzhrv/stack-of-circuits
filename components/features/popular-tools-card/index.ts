@@ -1,0 +1,1 @@
+export { PopularToolsCard } from './component';

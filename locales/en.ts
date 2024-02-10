@@ -1,0 +1,269 @@
+export default {
+  Root: {
+    title:
+      'Useful tools for electrical and electronics engineering - Stack of Circuits',
+    description:
+      'Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices.'
+  },
+  Home: {
+    title: 'Useful tools for electrical and electronics engineering',
+    subtitle:
+      'Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices.'
+  },
+  Tools: {
+    title: 'Tools'
+  },
+  NavigationBar: {
+    tools: 'Tools'
+  },
+  BatteryLife: {
+    title: 'Battery life calculator',
+    description:
+      'Calculation of the battery life of the device from the battery or accumulator',
+    article: {
+      title: 'Calculation of the battery life of the device from the battery',
+      paragraph:
+        'This calculator provides two options — basic and advanced — to determine the expected battery life of the device. To calculate, you must specify the battery capacity, as well as the current consumed by the device.'
+    }
+  },
+  InductorColorCode: {
+    title: 'Inductor color code calculator',
+    description:
+      'Calculation of the nominal value and tolerance of inductors by color code',
+    article: {
+      title: 'Calculation of the nominal inductance by color code',
+      paragraph:
+        'The inductors are marked with colored stripes that indicate the nominal value and tolerance. This calculator allows you to calculate the nominal value and tolerance of inductors. Calculation is supported for inductors with color markings in the form of 4 colored stripes.'
+    }
+  },
+  LedResistor: {
+    title: 'LED resistor calculator',
+    description:
+      'Calculating the resistance of a current limiting resistor for LEDs, ideal when you have one or more series LEDs and you need to calculate which resistor is needed',
+    article: {
+      title: 'Calculation of the current limiting resistor for LEDs',
+      paragraph:
+        'Each LED has a maximum allowable current with which it can operate normally. Even a short-term excess of this maximum current will damage the LED. Thus, it is necessary to limit the current flowing through the LED, one of the ways is to connect a current-limiting resistor in series. It is important to note that this method is not recommended for high-power LEDs that need a full-fledged current regulator.',
+      paragraph2:
+        'This calculator allows you to calculate the value of the current limiting resistor, which must be connected in series to the LEDs to limit the current. To do this, enter the specified values. The calculator will also calculate the power dissipated by the resistor, which will help you select the necessary power resistor.'
+    }
+  },
+  OhmsLaw: {
+    title: 'Ohm\u0027s law calculator',
+    description:
+      'Calculation of electrical circuit parameters using Ohm\u0027s law',
+    article: {
+      title:
+        'Calculation of electrical circuit parameters using Ohm\u0027s law',
+      paragraph:
+        'This calculator allows you to calculate voltage, resistance or current if you set any two other parameters. To use this tool, select the parameter to be calculated and enter the values of the other two parameters of the electrical circuit.'
+    }
+  },
+  ParallelEquivalence: {
+    title: 'Parallel equivalence calculator',
+    description:
+      'Calculation of the equivalence value of parallel resistors, capacitors and inductors',
+    article: {
+      title: 'Calculating the equivalence of a parallel connection',
+      paragraph:
+        'This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.'
+    }
+  },
+  ResistorColorCode: {
+    title: 'Resistor color code calculator',
+    description:
+      'Calculation of the nominal value and tolerance of resistors by color code',
+    article: {
+      title: 'Calculation of the nominal value of the resistor by color code',
+      paragraph:
+        'The resistors are marked with colored stripes that indicate the nominal value and tolerance of the resistor. This calculator allows you to calculate the nominal value, tolerance, and temperature coefficient for some resistors. Calculation is supported for color-coded resistors in the form of 4, 5 or 6 color bands.'
+    }
+  },
+  SmdResistorCode: {
+    title: 'SMD resistor code calculator',
+    description: 'Calculation of the resistance of an SMD resistor by code',
+    article: {
+      title: 'Calculation of the nominal value of SMD resistors by code',
+      paragraph:
+        'SMD resistors are marked with numbers and letters that indicate the nominal value of the resistor. This calculator allows you to calculate the nominal value for resistors marked with 3 or 4 characters. The EIA-96 marking is also supported.'
+    }
+  },
+  VoltageDivider: {
+    title: 'Voltage divider calculator',
+    description: 'Calculation of the voltage divider',
+    article: {
+      title: 'Calculation of the voltage divider',
+      paragraph:
+        'A voltage divider is an easy way to get a lower voltage, for this you need to connect two resistors in series and take the voltage between them. To calculate the voltage divider, it is necessary to enter the nominal value of the resistors and the input voltage.'
+    }
+  },
+  ThemeToggle: {
+    trigger: 'Toggle theme',
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System'
+  },
+  BatteryLifeCalculator: {
+    mode: {
+      basic: 'Basic',
+      advanced: 'Advanced'
+    },
+    form: {
+      batteryCapacity: 'Battery Capacity',
+      batteryCapacityUnit: 'mAh',
+      consumptionCurrent: 'Device load current',
+      consumptionCurrentUnit: 'mA',
+      sleepModeTime: 'Time spent in sleep mode',
+      sleepModeTimeUnit: 's',
+      sleepModeCurrent: 'Current draw in sleep mode',
+      sleepModeCurrentUnit: 'mA',
+      awakeModeTime: 'Time spent awake',
+      awakeModeTimeUnit: 's',
+      awakeModeCurrent: 'Current draw when awake',
+      awakeModeCurrentUnit: 'mA'
+    },
+    result: {
+      batteryLifetime: 'Battery lifetime'
+    }
+  },
+  InductorColorCodeCalculator: {
+    form: {
+      firstDigit: '1st digit',
+      secondDigit: '2nd digit',
+      multiplier: 'Multiplier',
+      tolerance: 'Tolerance'
+    },
+    result: {
+      value: 'Inductor value',
+      tolerance: 'Tolerance'
+    }
+  },
+  LedResistorCalculator: {
+    form: {
+      supplyVoltage: 'Supply voltage',
+      supplyVoltageUnit: 'V',
+      forwardVoltage: 'Forward voltage',
+      forwardVoltageUnit: 'V',
+      forwardCurrent: 'Forward current',
+      forwardCurrentUnit: 'mA',
+      numberOfLED: 'Number of LEDs',
+      errorMsg:
+        'The supply voltage must be higher than the voltage drop on the LEDs'
+    },
+    result: {
+      value: 'Resistor value',
+      resistorPowerDissipation: 'Resistor power dissipation'
+    }
+  },
+  OhmsLawCalculator: {
+    mode: {
+      voltage: 'Voltage',
+      current: 'Current',
+      resistance: 'Resistance'
+    },
+    form: {
+      voltage: 'Voltage',
+      voltageUnit: 'V',
+      current: 'Current',
+      currentUnit: 'A',
+      resistance: 'Resistance',
+      resistanceUnit: 'Ohm'
+    },
+    result: {
+      voltage: 'Voltage',
+      current: 'Current',
+      resistance: 'Resistance',
+      power: 'Power'
+    }
+  },
+  ParallelEquivalenceCalculator: {
+    componentName: {
+      resistor: 'Resistor',
+      capacitor: 'Capacitor',
+      inductor: 'Inductor'
+    },
+    unitName: {
+      resistor: 'Ω',
+      capacitor: 'µF',
+      inductor: 'µH'
+    },
+    resultTitle: {
+      resistor: 'Equivalent resistance',
+      capacitor: 'Equivalent capacity',
+      inductor: 'Equivalent inductance'
+    }
+  },
+  ResistorColorCodeCalculator: {
+    mode: {
+      Band4: '4 band',
+      Band5: '5 band',
+      Band6: '6 band'
+    },
+    form: {
+      firstDigit: '1st digit',
+      secondDigit: '2nd digit',
+      thirdDigit: '3rd digit',
+      multiplier: 'Multiplier',
+      tolerance: 'Tolerance',
+      tempco: 'Temperature coefficient'
+    },
+    result: {
+      value: 'Resistance value',
+      tolerance: 'Tolerance',
+      tempco: 'Temperature coefficient'
+    }
+  },
+  SmdResistorCodeCalculator: {
+    form: { code: 'Resistor marking' },
+    result: {
+      value: 'Resistance value'
+    }
+  },
+  VoltageDividerCalculator: {
+    form: {
+      supplyVoltage: 'Voltage input',
+      supplyVoltageUnit: 'V',
+      resistor1: 'Resistance 1',
+      resistor2: 'Resistance 2',
+      resistorsUnit: 'Ohm'
+    },
+    result: {
+      outputVoltage: 'Output Voltage'
+    }
+  },
+  PopularToolsCard: {
+    title: 'Popular tools'
+  },
+  NotFound: {
+    title: 'Page Not Found',
+    link: 'Go to the home page'
+  },
+  useBandColors: {
+    black: 'Black',
+    brown: 'Brown',
+    red: 'Red',
+    orange: 'Orange',
+    yellow: 'Yellow',
+    green: 'Green',
+    blue: 'Blue',
+    violet: 'Violet',
+    gray: 'Gray',
+    white: 'White',
+    silver: 'Silver',
+    gold: 'Gold'
+  },
+  useFormatTime: {
+    days: 'd',
+    hours: 'h',
+    minutes: 'min',
+    seconds: 's'
+  },
+  useFormatUnits: {
+    voltage: 'mV.V.kV.MV',
+    current: 'µA.mA.A.kA.MA',
+    resistance: 'Ω.kΩ.MΩ.GΩ',
+    capacity: 'pF.nF.µF.mF.F',
+    inductance: 'nH.µH.mH.H',
+    power: 'mW.W.kW.MW'
+  }
+} as const;

@@ -1,4 +1,4 @@
-# Circuit Guide
+# Stack of Circuits
 
 Web application with various electronics tools and calculators
 

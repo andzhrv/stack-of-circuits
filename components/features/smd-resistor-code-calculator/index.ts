@@ -1,0 +1,1 @@
+export { SmdResistorCodeCalculator } from './component';

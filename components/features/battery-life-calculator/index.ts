@@ -1,0 +1,1 @@
+export { BatteryLifeCalculator } from './component';

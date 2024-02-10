@@ -1,0 +1,1 @@
+export { ResistorColorCodeCalculator } from './component';

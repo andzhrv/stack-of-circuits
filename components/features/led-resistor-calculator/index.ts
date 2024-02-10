@@ -1,0 +1,1 @@
+export { LedResistorCalculator } from './component';
