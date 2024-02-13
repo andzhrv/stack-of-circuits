@@ -1,7 +1,6 @@
 export default {
   Root: {
-    title:
-      'Useful tools for electrical and electronics engineering - Stack of Circuits',
+    title: 'Useful tools for electrical and electronics engineering',
     description:
       'Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices.'
   },

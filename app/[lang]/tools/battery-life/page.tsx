@@ -11,11 +11,11 @@ export const generateMetadata = async ({
   params: { lang }
 }: {
   params: { lang: string };
-}) => {
+}): Promise<Metadata> => {
   const t = await getI18n();
 
-  const metadata: Metadata = {
-    title: `${t('BatteryLife.title')} – Stack of Circuits`,
+  return {
+    title: t('BatteryLife.title'),
     description: t('BatteryLife.description'),
     openGraph: {
       title: t('BatteryLife.title'),
@@ -23,10 +23,15 @@ export const generateMetadata = async ({
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
+    },
+    alternates: {
+      languages: {
+        en: '/tools/battery-life',
+        'x-default': '/tools/battery-life',
+        ru: '/ru/tools/battery-life'
+      }
     }
   };
-
-  return metadata;
 };
 
 const BatteryLife = async () => {

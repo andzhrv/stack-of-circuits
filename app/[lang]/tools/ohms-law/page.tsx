@@ -11,11 +11,11 @@ export const generateMetadata = async ({
   params: { lang }
 }: {
   params: { lang: string };
-}) => {
+}): Promise<Metadata> => {
   const t = await getI18n();
 
-  const metadata: Metadata = {
-    title: `${t('OhmsLaw.title')} – Stack of Circuits`,
+  return {
+    title: t('OhmsLaw.title'),
     description: t('OhmsLaw.description'),
     openGraph: {
       title: t('OhmsLaw.title'),
@@ -23,10 +23,15 @@ export const generateMetadata = async ({
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
+    },
+    alternates: {
+      languages: {
+        en: '/tools/ohms-law',
+        'x-default': '/tools/ohms-law',
+        ru: '/ru/tools/ohms-law'
+      }
     }
   };
-
-  return metadata;
 };
 
 const OhmsLaw = async () => {

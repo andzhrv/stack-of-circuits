@@ -11,11 +11,11 @@ export const generateMetadata = async ({
   params: { lang }
 }: {
   params: { lang: string };
-}) => {
+}): Promise<Metadata> => {
   const t = await getI18n();
 
-  const metadata: Metadata = {
-    title: `${t('ParallelEquivalence.title')} – Stack of Circuits`,
+  return {
+    title: t('ParallelEquivalence.title'),
     description: t('ParallelEquivalence.description'),
     openGraph: {
       title: t('ParallelEquivalence.title'),
@@ -23,10 +23,15 @@ export const generateMetadata = async ({
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
+    },
+    alternates: {
+      languages: {
+        en: '/tools/parallel-equivalence',
+        'x-default': '/tools/parallel-equivalence',
+        ru: '/ru/tools/parallel-equivalence'
+      }
     }
   };
-
-  return metadata;
 };
 
 const ParallelEquivalence = async () => {

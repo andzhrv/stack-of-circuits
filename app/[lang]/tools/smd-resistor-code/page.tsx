@@ -11,11 +11,11 @@ export const generateMetadata = async ({
   params: { lang }
 }: {
   params: { lang: string };
-}) => {
+}): Promise<Metadata> => {
   const t = await getI18n();
 
-  const metadata: Metadata = {
-    title: `${t('SmdResistorCode.title')} – Stack of Circuits`,
+  return {
+    title: t('SmdResistorCode.title'),
     description: t('SmdResistorCode.description'),
     openGraph: {
       title: t('SmdResistorCode.title'),
@@ -23,10 +23,15 @@ export const generateMetadata = async ({
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
+    },
+    alternates: {
+      languages: {
+        en: '/tools/smd-resistor-code',
+        'x-default': '/tools/smd-resistor-code',
+        ru: '/ru/tools/smd-resistor-code'
+      }
     }
   };
-
-  return metadata;
 };
 
 const SmdResistorCode = async () => {

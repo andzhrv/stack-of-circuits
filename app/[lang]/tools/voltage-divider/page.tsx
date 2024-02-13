@@ -11,11 +11,11 @@ export const generateMetadata = async ({
   params: { lang }
 }: {
   params: { lang: string };
-}) => {
+}): Promise<Metadata> => {
   const t = await getI18n();
 
-  const metadata: Metadata = {
-    title: `${t('VoltageDivider.title')} – Stack of Circuits`,
+  return {
+    title: t('VoltageDivider.title'),
     description: t('VoltageDivider.description'),
     openGraph: {
       title: t('VoltageDivider.title'),
@@ -23,10 +23,15 @@ export const generateMetadata = async ({
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
+    },
+    alternates: {
+      languages: {
+        en: '/tools/voltage-divider',
+        'x-default': '/tools/voltage-divider',
+        ru: '/ru/tools/voltage-divider'
+      }
     }
   };
-
-  return metadata;
 };
 
 const VoltageDivider = async () => {

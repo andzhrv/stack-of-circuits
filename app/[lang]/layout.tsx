@@ -9,9 +9,16 @@ import { YA_METRIKA_SCRIPT } from '@/components/features/ya-metrika/config';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import { I18nProviderClient } from '@/locales/client';
-import { getI18n } from '@/locales/server';
 
 import './globals.css';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://stackofcircuits.com'),
+  title: {
+    template: '%s – Stack of Circuits',
+    default: 'Stack of Circuits'
+  }
+};
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -22,29 +29,6 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1
-};
-
-export const generateMetadata = async ({
-  params: { lang }
-}: {
-  params: { lang: string };
-}) => {
-  const t = await getI18n();
-
-  const metadata: Metadata = {
-    title: t('Root.title'),
-    description: t('Root.description'),
-    openGraph: {
-      title: t('Root.title'),
-      description: t('Root.description'),
-      url: 'https://stackofcircuits.com',
-      siteName: 'Stack of Circuits',
-      locale: lang,
-      type: 'website'
-    }
-  };
-
-  return metadata;
 };
 
 const RootLayout = ({
