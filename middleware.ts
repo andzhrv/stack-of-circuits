@@ -6,7 +6,7 @@ import { i18nConfig } from './i18n-config';
 const I18nMiddleware = createI18nMiddleware({
   locales: i18nConfig.locales,
   defaultLocale: i18nConfig.defaultLocale,
-  urlMappingStrategy: 'rewrite'
+  urlMappingStrategy: 'rewriteDefault'
 });
 
 export function middleware(request: NextRequest) {
