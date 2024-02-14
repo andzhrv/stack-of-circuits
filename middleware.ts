@@ -1,12 +1,14 @@
 import { NextRequest } from 'next/server';
 import { createI18nMiddleware } from 'next-international/middleware';
 
-import { i18nConfig } from './i18n-config';
+import { defaultLocale, locales } from './i18n-config';
 
 const I18nMiddleware = createI18nMiddleware({
-  locales: i18nConfig.locales,
-  defaultLocale: i18nConfig.defaultLocale,
-  urlMappingStrategy: 'rewriteDefault'
+  locales,
+  defaultLocale,
+  urlMappingStrategy: 'rewriteDefault',
+  resolveLocaleFromRequest: ({ nextUrl: { pathname } }): 'en' | 'ru' =>
+    pathname === '/ru' || pathname.startsWith(`/ru/`) ? 'ru' : defaultLocale
 });
 
 export function middleware(request: NextRequest) {
