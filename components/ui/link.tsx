@@ -11,7 +11,10 @@ interface LinksListItemProps extends LinkProps {
 export const Link = ({ className, children, ...props }: LinksListItemProps) => {
   return (
     <NextLink
-      className={cn('underline underline-offset-4', className)}
+      className={cn(
+        'text-muted-foreground underline underline-offset-4',
+        className
+      )}
       {...props}
     >
       {children}
