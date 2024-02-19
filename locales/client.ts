@@ -10,8 +10,8 @@ export const {
   I18nProviderClient
 } = createI18nClient(
   {
-    en: () => import('./en'),
-    ru: () => import('./ru')
+    en: () => import('./en.json'),
+    ru: () => import('./ru.json')
   },
   {
     segmentName: 'lang'
