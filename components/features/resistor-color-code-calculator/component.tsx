@@ -117,59 +117,60 @@ export const ResistorColorCodeCalculator = () => {
       </Tabs>
       <Card>
         <CardContent>
-          <Label className="block mb-4 md:mb-5">
+          <Label className="block" htmlFor="first-digit">
             {t('form.firstDigit')}
-            <Select value={firstDigitValue} onValueChange={setFirstDigitValue}>
-              <SelectTrigger className="mt-2">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {firstDigit.map((key) => (
-                  <SelectItem key={key} value={bandColors[key].value}>
-                    <div className="flex items-center">
-                      <div
-                        className="w-[14px] h-[14px] rounded-sm mr-1"
-                        style={{ backgroundColor: bandColors[key].color }}
-                      />
-                      {bandColors[key].title}
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </Label>
-          <Label className="block mb-4 md:mb-5">
+          <Select value={firstDigitValue} onValueChange={setFirstDigitValue}>
+            <SelectTrigger id="first-digit" className="mt-2 mb-4 md:mb-5">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {firstDigit.map((key) => (
+                <SelectItem key={key} value={bandColors[key].value}>
+                  <div className="flex items-center">
+                    <div
+                      className="w-[14px] h-[14px] rounded-sm mr-1"
+                      style={{ backgroundColor: bandColors[key].color }}
+                    />
+                    {bandColors[key].title}
+                  </div>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Label className="block" htmlFor="second-digit">
             {t('form.secondDigit')}
-            <Select
-              value={secondDigitValue}
-              onValueChange={setSecondDigitValue}
-            >
-              <SelectTrigger className="mt-2">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {secondDigit.map((key) => (
-                  <SelectItem key={key} value={bandColors[key].value}>
-                    <div className="flex items-center">
-                      <div
-                        className="w-[14px] h-[14px] rounded-sm mr-1"
-                        style={{ backgroundColor: bandColors[key].color }}
-                      />
-                      {bandColors[key].title}
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </Label>
+          <Select value={secondDigitValue} onValueChange={setSecondDigitValue}>
+            <SelectTrigger id="second-digit" className="mt-2 mb-4 md:mb-5">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {secondDigit.map((key) => (
+                <SelectItem key={key} value={bandColors[key].value}>
+                  <div className="flex items-center">
+                    <div
+                      className="w-[14px] h-[14px] rounded-sm mr-1"
+                      style={{ backgroundColor: bandColors[key].color }}
+                    />
+                    {bandColors[key].title}
+                  </div>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
           {bandsNumber !== '4-band' ? (
-            <Label className="block mb-4 md:mb-5">
-              {t('form.thirdDigit')}
+            <>
+              <Label className="block" htmlFor="third-digit">
+                {t('form.thirdDigit')}
+              </Label>
               <Select
                 value={thirdDigitValue}
                 onValueChange={setThirdDigitValue}
               >
-                <SelectTrigger className="mt-2">
+                <SelectTrigger id="third-digit" className="mt-2 mb-4 md:mb-5">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -186,55 +187,59 @@ export const ResistorColorCodeCalculator = () => {
                   ))}
                 </SelectContent>
               </Select>
-            </Label>
+            </>
           ) : null}
-          <Label className="block mb-4 md:mb-5">
+          <Label className="block" htmlFor="multiplier">
             {t('form.multiplier')}
-            <Select value={multiplierValue} onValueChange={setMultiplierValue}>
-              <SelectTrigger className="mt-2">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {multiplier.map(([key, value]) => (
-                  <SelectItem key={key} value={value}>
-                    <div className="flex items-center">
-                      <div
-                        className="w-[14px] h-[14px] rounded-sm mr-1"
-                        style={{ backgroundColor: bandColors[key].color }}
-                      />
-                      {bandColors[key].title}
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </Label>
-          <Label className="block mb-4 md:mb-5">
+          <Select value={multiplierValue} onValueChange={setMultiplierValue}>
+            <SelectTrigger id="multiplier" className="mt-2 mb-4 md:mb-5">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {multiplier.map(([key, value]) => (
+                <SelectItem key={key} value={value}>
+                  <div className="flex items-center">
+                    <div
+                      className="w-[14px] h-[14px] rounded-sm mr-1"
+                      style={{ backgroundColor: bandColors[key].color }}
+                    />
+                    {bandColors[key].title}
+                  </div>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Label className="block" htmlFor="tolerance">
             {t('form.tolerance')}
-            <Select value={toleranceValue} onValueChange={setToleranceValue}>
-              <SelectTrigger className="mt-2">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                {tolerance.map(([key, value]) => (
-                  <SelectItem key={key} value={value}>
-                    <div className="flex items-center">
-                      <div
-                        className="w-[14px] h-[14px] rounded-sm mr-1"
-                        style={{ backgroundColor: bandColors[key].color }}
-                      />
-                      {bandColors[key].title}
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </Label>
+          <Select value={toleranceValue} onValueChange={setToleranceValue}>
+            <SelectTrigger id="tolerance" className="mt-2 mb-4 md:mb-5">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {tolerance.map(([key, value]) => (
+                <SelectItem key={key} value={value}>
+                  <div className="flex items-center">
+                    <div
+                      className="w-[14px] h-[14px] rounded-sm mr-1"
+                      style={{ backgroundColor: bandColors[key].color }}
+                    />
+                    {bandColors[key].title}
+                  </div>
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
           {bandsNumber === '6-band' ? (
-            <Label className="block mb-4 md:mb-5">
-              {t('form.tempco')}
+            <>
+              <Label className="block" htmlFor="tempco">
+                {t('form.tempco')}
+              </Label>
               <Select value={tempcoValue} onValueChange={setTempcoValue}>
-                <SelectTrigger className="mt-2">
+                <SelectTrigger id="tempco" className="mt-2 mb-4 md:mb-5">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -251,7 +256,7 @@ export const ResistorColorCodeCalculator = () => {
                   ))}
                 </SelectContent>
               </Select>
-            </Label>
+            </>
           ) : null}
         </CardContent>
         <CardFooter className="flex flex-col items-start">

@@ -12,11 +12,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, leftSection, rightSection, error, ...props }, ref) => {
     return (
       <>
-        <div className={cn('flex h-9 w-full', className)}>
+        <span className={cn('flex h-9 w-full', className)}>
           {leftSection ? (
-            <div className="flex h-9 px-3 items-center rounded-l-md text-sm shadow-sm border-y border-l border-input bg-secondary">
+            <span className="flex h-9 px-3 items-center rounded-l-md text-sm shadow-sm border-y border-l border-input bg-secondary">
               {leftSection}
-            </div>
+            </span>
           ) : null}
           <input
             type={type}
@@ -30,11 +30,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
           {rightSection ? (
-            <div className="flex h-9 px-3 items-center rounded-r-md text-sm shadow-sm border-y border-r border-input bg-secondary">
+            <span className="flex h-9 px-3 items-center rounded-r-md text-sm shadow-sm border-y border-r border-input bg-secondary">
               {rightSection}
-            </div>
+            </span>
           ) : null}
-        </div>
+        </span>
         {error ? (
           <div className="text-destructive text-sm mt-2">{error}</div>
         ) : null}
