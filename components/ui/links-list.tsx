@@ -44,7 +44,7 @@ const LinksListItem = forwardRef<HTMLAnchorElement, LinksListItemProps>(
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <h3 className="text-sm font-medium leading-none">{title}</h3>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
