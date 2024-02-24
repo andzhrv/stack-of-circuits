@@ -4,13 +4,13 @@
     "description": "Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices."
   },
   "Home": {
-    "title": "Useful tools for electrical and electronics engineering",
+    "title": "Tools for electrical and electronics engineering",
     "subtitle": "Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices."
   },
   "Tools": { "title": "Tools" },
   "NavigationBar": { "tools": "Tools" },
   "BatteryLife": {
-    "title": "Battery life calculator",
+    "title": "Battery Life Calculator",
     "description": "Calculation of the battery life of the device from the battery or accumulator",
     "article": {
       "title": "Calculation of the battery life of the device from the battery",
@@ -18,7 +18,7 @@
     }
   },
   "InductorColorCode": {
-    "title": "Inductor color code calculator",
+    "title": "Inductor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of inductors by color code",
     "article": {
       "title": "Calculation of the nominal inductance by color code",
@@ -26,7 +26,7 @@
     }
   },
   "LedResistor": {
-    "title": "LED resistor calculator",
+    "title": "LED Resistor Calculator",
     "description": "Calculating the resistance of a current limiting resistor for LEDs, ideal when you have one or more series LEDs and you need to calculate which resistor is needed",
     "article": {
       "title": "Calculation of the current limiting resistor for LEDs",
@@ -35,7 +35,7 @@
     }
   },
   "OhmsLaw": {
-    "title": "Ohm's law calculator",
+    "title": "Ohm's Law Calculator",
     "description": "Calculation of electrical circuit parameters using Ohm's law",
     "article": {
       "title": "Calculation of electrical circuit parameters using Ohm's law",
@@ -43,7 +43,7 @@
     }
   },
   "ParallelEquivalence": {
-    "title": "Parallel equivalence calculator",
+    "title": "Parallel Equivalence Calculator",
     "description": "Calculation of the equivalence value of parallel resistors, capacitors and inductors",
     "article": {
       "title": "Calculating the equivalence of a parallel connection",
@@ -51,7 +51,7 @@
     }
   },
   "ResistorColorCode": {
-    "title": "Resistor color code calculator",
+    "title": "Resistor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of resistors by color code",
     "article": {
       "title": "Calculation of the nominal value of the resistor by color code",
@@ -59,7 +59,7 @@
     }
   },
   "SmdResistorCode": {
-    "title": "SMD resistor code calculator",
+    "title": "SMD Resistor Code Calculator",
     "description": "Calculation of the resistance of an SMD resistor by code",
     "article": {
       "title": "Calculation of the nominal value of SMD resistors by code",
@@ -67,7 +67,7 @@
     }
   },
   "VoltageDivider": {
-    "title": "Voltage divider calculator",
+    "title": "Voltage Divider Calculator",
     "description": "Calculation of the voltage divider",
     "article": {
       "title": "Calculation of the voltage divider",
