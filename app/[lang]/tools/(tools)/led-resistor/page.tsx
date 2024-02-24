@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { LedResistorCalculator } from '@/components/features/led-resistor-calculator';
@@ -47,6 +48,13 @@ const LedResistor = async () => {
         <Title level={2} className="mb-4">
           {t('LedResistor.article.title')}
         </Title>
+        <Image
+          className="self-center"
+          src="/led-resistor-diagram.png"
+          width={300}
+          height={200}
+          alt="Circuit with LED and resistor"
+        />
         <Paragraph>{t('LedResistor.article.paragraph')}</Paragraph>
         <Paragraph>{t('LedResistor.article.paragraph2')}</Paragraph>
       </Article>
