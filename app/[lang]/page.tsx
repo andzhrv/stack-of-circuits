@@ -13,7 +13,7 @@ export const generateMetadata = async ({
   const t = await getI18n();
 
   return {
-    title: `${t('Root.title')} – Stack of Circuits`,
+    title: `${t('Root.title')} / Stack of Circuits`,
     description: t('Root.description'),
     openGraph: {
       title: t('Root.title'),
@@ -38,7 +38,7 @@ const Home = async () => {
   const toolsLink = await getToolsLink();
 
   return (
-    <div>
+    <main>
       <Title className="mb-6">{t('Home.title')}</Title>
       <Title className="mb-4" level={2}>
         {t('Home.subtitle')}
@@ -50,7 +50,7 @@ const Home = async () => {
           </LinksListItem>
         ))}
       </LinksList>
-    </div>
+    </main>
   );
 };
 

@@ -15,7 +15,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://stackofcircuits.com'),
   title: {
-    template: '%s – Stack of Circuits',
+    template: '%s / Stack of Circuits',
     default: 'Stack of Circuits'
   }
 };
@@ -53,9 +53,9 @@ const RootLayout = ({
         >
           <I18nProviderClient locale={lang}>
             <Header />
-            <main className="basis-full mx-6 md:mx-12 lg:mx-20 py-10">
+            <div className="basis-full mx-6 md:mx-12 lg:mx-20 py-10">
               {children}
-            </main>
+            </div>
             <Footer />
           </I18nProviderClient>
         </ThemeProvider>

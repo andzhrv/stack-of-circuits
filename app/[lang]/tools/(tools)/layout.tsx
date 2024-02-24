@@ -8,8 +8,8 @@ const ToolsLayout = ({
   children: ReactNode;
 }>) => {
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="md:mr-8 basis-full">{children}</div>
+    <div className="flex flex-col md:flex-row gap-6 md:gap-10">
+      <main className="basis-full">{children}</main>
       <Sidebar />
     </div>
   );

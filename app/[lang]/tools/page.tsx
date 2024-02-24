@@ -37,16 +37,16 @@ const Tools = async () => {
   const toolsLink = await getToolsLink();
 
   return (
-    <>
+    <main>
       <Title className="mb-6">{t('Tools.title')}</Title>
-      <LinksList className="lg:grid-cols-[1fr_1fr]">
+      <LinksList>
         {toolsLink.map(({ title, href, description }, i) => (
           <LinksListItem key={i} title={title} href={href}>
             {description}
           </LinksListItem>
         ))}
       </LinksList>
-    </>
+    </main>
   );
 };
 
