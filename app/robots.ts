@@ -1,12 +1,14 @@
 import { MetadataRoute } from 'next';
 
+import { BASE_URL } from '@/constants';
+
 const generateRobots = (): MetadataRoute.Robots => {
   return {
     rules: {
       userAgent: '*',
       allow: '/'
     },
-    sitemap: 'https://stackofcircuits.com/sitemap.xml'
+    sitemap: `${BASE_URL}/sitemap.xml`
   };
 };
 
