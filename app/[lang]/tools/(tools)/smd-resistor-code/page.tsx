@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import { setStaticParamsLocale } from 'next-international/server';
 
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { SmdResistorCodeCalculator } from '@/components/features/smd-resistor-code-calculator';
 import { Article } from '@/components/ui/article';
 import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
-import { getI18n } from '@/locales/server';
+import { getI18n, getStaticParams } from '@/locales/server';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -34,7 +35,17 @@ export const generateMetadata = async ({
   };
 };
 
-const SmdResistorCode = async () => {
+export const generateStaticParams = () => {
+  return getStaticParams();
+};
+
+const SmdResistorCode = async ({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) => {
+  setStaticParamsLocale(lang);
+
   const t = await getI18n();
 
   return (

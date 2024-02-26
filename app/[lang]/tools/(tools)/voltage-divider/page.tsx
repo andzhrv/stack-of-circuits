@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import { setStaticParamsLocale } from 'next-international/server';
 
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { VoltageDividerCalculator } from '@/components/features/voltage-divider-calculator';
 import { Article } from '@/components/ui/article';
 import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
-import { getI18n } from '@/locales/server';
+import { getI18n, getStaticParams } from '@/locales/server';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -34,7 +35,17 @@ export const generateMetadata = async ({
   };
 };
 
-const VoltageDivider = async () => {
+export const generateStaticParams = () => {
+  return getStaticParams();
+};
+
+const VoltageDivider = async ({
+  params: { lang }
+}: {
+  params: { lang: string };
+}) => {
+  setStaticParamsLocale(lang);
+
   const t = await getI18n();
 
   return (

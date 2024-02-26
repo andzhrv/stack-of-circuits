@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -44,7 +45,9 @@ const RootLayout = ({
         <Script id="metrika-counter" strategy="beforeInteractive">
           {YA_METRIKA_SCRIPT}
         </Script>
-        <YaMetrikaCounter />
+        <Suspense>
+          <YaMetrikaCounter />
+        </Suspense>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

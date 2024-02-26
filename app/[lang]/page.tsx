@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { setStaticParamsLocale } from 'next-international/server';
 
 import { LinksList, LinksListItem } from '@/components/ui/links-list';
 import { Title } from '@/components/ui/title';
 import { getToolsLink } from '@/constants/tools-link';
-import { getI18n } from '@/locales/server';
+import { getI18n, getStaticParams } from '@/locales/server';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -33,7 +34,13 @@ export const generateMetadata = async ({
   };
 };
 
-const Home = async () => {
+export const generateStaticParams = () => {
+  return getStaticParams();
+};
+
+const Home = async ({ params: { lang } }: { params: { lang: string } }) => {
+  setStaticParamsLocale(lang);
+
   const t = await getI18n();
   const toolsLink = await getToolsLink();
 
