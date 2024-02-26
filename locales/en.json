@@ -10,7 +10,10 @@
     "title": "Tools for electrical and electronics engineering",
     "subtitle": "Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices."
   },
-  "Tools": { "title": "Tools" },
+  "Tools": {
+    "title": "Calculators and tools for Electronics & Electrical Engineering",
+    "description": "A set of tools and calculators for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
+  },
   "NavigationBar": { "tools": "Tools" },
   "BatteryLife": {
     "title": "Battery Life Calculator",
@@ -30,7 +33,7 @@
   },
   "LedResistor": {
     "title": "LED Resistor Calculator",
-    "description": "Calculating the resistance of a current limiting resistor for LEDs, ideal when you have one or more series LEDs and you need to calculate which resistor is needed",
+    "description": "Calculation of a current limiting resistor for one or more LEDs connected in series. This calculator is ideal when you have one or more consecutive LEDs and you need to calculate which resistance resistor needs to be connected to the circuit.",
     "article": {
       "title": "Calculation of the current limiting resistor for LEDs",
       "paragraph": "Each LED has a maximum allowable current with which it can operate normally. Even a short-term excess of this maximum current will damage the LED. Thus, it is necessary to limit the current flowing through the LED, one of the ways is to connect a current-limiting resistor in series. It is important to note that this method is not recommended for high-power LEDs that need a full-fledged current regulator.",

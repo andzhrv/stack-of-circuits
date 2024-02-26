@@ -14,11 +14,11 @@ export const generateMetadata = async ({
   const t = await getI18n();
 
   return {
-    title: t('Root.title'),
-    description: t('Root.description'),
+    title: t('Tools.title'),
+    description: t('Tools.description'),
     openGraph: {
-      title: t('Root.title'),
-      description: t('Root.description'),
+      title: t('Tools.title'),
+      description: t('Tools.description'),
       siteName: 'Stack of Circuits',
       locale: lang,
       type: 'website'
