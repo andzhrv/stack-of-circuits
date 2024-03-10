@@ -1,12 +1,9 @@
-import { Suspense } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 
 import { Footer } from '@/components/features/footer';
 import { Header } from '@/components/features/header';
-import { YaMetrikaCounter } from '@/components/features/ya-metrika/component';
-import { YA_METRIKA_SCRIPT } from '@/components/features/ya-metrika/config';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import { I18nProviderClient } from '@/locales/client';
@@ -41,12 +38,14 @@ const RootLayout = ({
   return (
     <html lang={lang} className="h-full">
       <body className={cn(inter.className, 'flex flex-col h-full')}>
-        <Script id="metrika-counter" strategy="beforeInteractive">
-          {YA_METRIKA_SCRIPT}
-        </Script>
-        <Suspense>
-          <YaMetrikaCounter />
-        </Suspense>
+        <Script
+          id="um-counter"
+          defer
+          strategy="beforeInteractive"
+          src="https://um.stackofcircuits.com/script.js"
+          data-website-id="e8747443-70f7-4f36-afc6-b0336dbc9772"
+          data-domains="stackofcircuits.com"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
