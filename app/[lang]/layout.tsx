@@ -36,7 +36,7 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang={lang} className="h-full">
+    <html lang={lang} className="h-full" suppressHydrationWarning>
       <body className={cn(inter.className, 'flex flex-col h-full')}>
         <Script
           id="um-counter"
