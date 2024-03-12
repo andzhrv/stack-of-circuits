@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { useNumberInput } from '@/hooks/use-number-input';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
@@ -31,6 +32,8 @@ export const VoltageDividerCalculator = () => {
   });
 
   const outputVoltage = (resistor2 / (resistor1 + resistor2)) * supplyVoltage;
+
+  useTrackResultChange('voltage-divider-change', outputVoltage);
 
   return (
     <Card>

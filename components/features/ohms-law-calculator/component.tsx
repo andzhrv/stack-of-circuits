@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNumberInput } from '@/hooks/use-number-input';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
@@ -42,6 +43,8 @@ export const OhmsLawCalculator = () => {
     resistance: resistanceValue,
     valueToCalculate
   });
+
+  useTrackResultChange('ohms-law-change', power);
 
   useEffect(() => {
     if (valueToCalculate === 'voltage') {

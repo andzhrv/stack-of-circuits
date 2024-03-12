@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNumberInput } from '@/hooks/use-number-input';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { useFormatTime } from '@/utils/format-time';
 
@@ -54,6 +55,8 @@ export const BatteryLifeCalculator = () => {
   });
 
   const batteryLifetime = (batteryCapacity / deviceLoadCurrent) * 3600;
+
+  useTrackResultChange('battery-life-change', batteryLifetime);
 
   const batteryLifetimeAdvanced =
     (batteryCapacity /

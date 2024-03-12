@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { useInputState } from '@/hooks/use-input-state';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
@@ -19,6 +20,8 @@ export const SmdResistorCodeCalculator = () => {
     validation: /^([\dR]{0,3}\d?|\d{0,2}[ABCDEFHRSXYZ]?)$/
   });
   const resistorValue = calculateSmdResistorValue(code);
+
+  useTrackResultChange('smd-resistor-code-change', resistorValue);
 
   return (
     <Card>

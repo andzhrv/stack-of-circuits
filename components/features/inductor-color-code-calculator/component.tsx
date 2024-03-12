@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/select';
 import { Statistic } from '@/components/ui/statistic';
 import { BandKey, useBandColors } from '@/constants/color-code';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
@@ -66,6 +67,8 @@ export const InductorColorCodeCalculator = () => {
   const inductorValue =
     parseInt(`${firstDigitValue}${secondDigitValue}`, 10) *
     parseFloat(multiplierValue);
+
+  useTrackResultChange('inductor-color-code-change', inductorValue);
 
   return (
     <Card>

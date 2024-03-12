@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useNumberInput } from '@/hooks/use-number-input';
+import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
@@ -86,6 +87,8 @@ export const ParallelEquivalenceCalculator = () => {
     [value1, value2, value3, value4, value5],
     component === 'capacitor' ? 'forward' : 'backwards'
   );
+
+  useTrackResultChange('parallel-equivalence-change', resistance);
 
   return (
     <>
