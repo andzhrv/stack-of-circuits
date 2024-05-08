@@ -18,67 +18,42 @@
   "BatteryLife": {
     "title": "Battery Life Calculator",
     "description": "Calculation of the battery life of the device from the battery or accumulator",
-    "article": {
-      "title": "Calculation of the battery life of the device from the battery",
-      "paragraph": "This calculator provides two options — basic and advanced — to determine the expected battery life of the device. To calculate, you must specify the battery capacity, as well as the current consumed by the device."
-    }
+    "article": "## Calculation of the battery life of the device from the battery\nThis calculator provides two options — basic and advanced — to determine the expected battery life of the device. To calculate, you must specify the battery capacity, as well as the current consumed by the device."
   },
   "InductorColorCode": {
     "title": "Inductor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of inductors by color code",
-    "article": {
-      "title": "Calculation of the nominal inductance by color code",
-      "paragraph": "The inductors are marked with colored stripes that indicate the nominal value and tolerance. This calculator allows you to calculate the nominal value and tolerance of inductors. Calculation is supported for inductors with color markings in the form of 4 colored stripes."
-    }
+    "article": "## Calculation of the nominal inductance by color code\nThe inductors are marked with colored stripes that indicate the nominal value and tolerance. This calculator allows you to calculate the nominal value and tolerance of inductors. Calculation is supported for inductors with color markings in the form of 4 colored stripes."
   },
   "LedResistor": {
     "title": "LED Resistor Calculator",
     "description": "Calculation of a current limiting resistor for one or more LEDs connected in series. This calculator is ideal when you have one or more consecutive LEDs and you need to calculate which resistance resistor needs to be connected to the circuit.",
-    "article": {
-      "title": "Calculation of the current limiting resistor for LEDs",
-      "paragraph": "Each LED has a maximum allowable current with which it can operate normally. Even a short-term excess of this maximum current will damage the LED. Thus, it is necessary to limit the current flowing through the LED, one of the ways is to connect a current-limiting resistor in series. It is important to note that this method is not recommended for high-power LEDs that need a full-fledged current regulator.",
-      "paragraph2": "This calculator allows you to calculate the value of the current limiting resistor, which must be connected in series to the LEDs to limit the current. To do this, enter the specified values. The calculator will also calculate the power dissipated by the resistor, which will help you select the necessary power resistor."
-    }
+    "article": "## Calculation of the current limiting resistor for LEDs\n![Circuit with LED and resistor](/led-resistor-diagram.png)\n\nEach LED has a maximum allowable current with which it can operate normally. Even a short-term excess of this maximum current will damage the LED. Thus, it is necessary to limit the current flowing through the LED, one of the ways is to connect a current-limiting resistor in series. It is important to note that this method is not recommended for high-power LEDs that need a full-fledged current regulator.\n\nThis calculator allows you to calculate the value of the current limiting resistor, which must be connected in series to the LEDs to limit the current. To do this, enter the specified values. The calculator will also calculate the power dissipated by the resistor, which will help you select the necessary power resistor."
   },
   "OhmsLaw": {
     "title": "Ohm's Law Calculator",
     "description": "Calculation of electrical circuit parameters using Ohm's law",
-    "article": {
-      "title": "Calculation of electrical circuit parameters using Ohm's law",
-      "paragraph": "This calculator allows you to calculate voltage, resistance or current if you set any two other parameters. To use this tool, select the parameter to be calculated and enter the values of the other two parameters of the electrical circuit."
-    }
+    "article": "## Calculation of electrical circuit parameters using Ohm's law\nThis calculator allows you to calculate voltage, resistance or current if you set any two other parameters. To use this tool, select the parameter to be calculated and enter the values of the other two parameters of the electrical circuit."
   },
   "ParallelEquivalence": {
     "title": "Parallel Equivalence Calculator",
     "description": "Calculation of the equivalence value of parallel resistors, capacitors and inductors",
-    "article": {
-      "title": "Calculating the equivalence of a parallel connection",
-      "paragraph": "This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values."
-    }
+    "article": "## Calculating the equivalence of a parallel connection\nThis calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values."
   },
   "ResistorColorCode": {
     "title": "Resistor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of resistors by color code",
-    "article": {
-      "title": "Calculation of the nominal value of the resistor by color code",
-      "paragraph": "The resistors are marked with colored stripes that indicate the nominal value and tolerance of the resistor. This calculator allows you to calculate the nominal value, tolerance, and temperature coefficient for some resistors. Calculation is supported for color-coded resistors in the form of 4, 5 or 6 color bands."
-    }
+    "article": "## Calculation of the nominal value of the resistor by color code\nThe resistors are marked with colored stripes that indicate the nominal value and tolerance of the resistor. This calculator allows you to calculate the nominal value, tolerance, and temperature coefficient for some resistors. Calculation is supported for color-coded resistors in the form of 4, 5 or 6 color bands."
   },
   "SmdResistorCode": {
     "title": "SMD Resistor Code Calculator",
     "description": "Calculation of the resistance of an SMD resistor by code",
-    "article": {
-      "title": "Calculation of the nominal value of SMD resistors by code",
-      "paragraph": "SMD resistors are marked with numbers and letters that indicate the nominal value of the resistor. This calculator allows you to calculate the nominal value for resistors marked with 3 or 4 characters. The EIA-96 marking is also supported."
-    }
+    "article": "## Calculation of the nominal value of SMD resistors by code\nSMD resistors are marked with numbers and letters that indicate the nominal value of the resistor. This calculator allows you to calculate the nominal value for resistors marked with 3 or 4 characters. The EIA-96 marking is also supported."
   },
   "VoltageDivider": {
     "title": "Voltage Divider Calculator",
     "description": "Calculation of the voltage divider",
-    "article": {
-      "title": "Calculation of the voltage divider",
-      "paragraph": "A voltage divider is an easy way to get a lower voltage, for this you need to connect two resistors in series and take the voltage between them. To calculate the voltage divider, it is necessary to enter the nominal value of the resistors and the input voltage."
-    }
+    "article": "## Calculation of the voltage divider\nA voltage divider is an easy way to get a lower voltage, for this you need to connect two resistors in series and take the voltage between them. To calculate the voltage divider, it is necessary to enter the nominal value of the resistors and the input voltage."
   },
   "ThemeToggle": {
     "trigger": "Toggle theme",

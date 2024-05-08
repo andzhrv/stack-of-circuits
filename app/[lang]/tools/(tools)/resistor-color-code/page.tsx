@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { ResistorColorCodeCalculator } from '@/components/features/resistor-color-code-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -54,12 +53,7 @@ const ResistorColorCode = async ({
       <CalculatorWrapper>
         <ResistorColorCodeCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('ResistorColorCode.article.title')}
-        </Title>
-        <Paragraph>{t('ResistorColorCode.article.paragraph')}</Paragraph>
-      </Article>
+      <Article>{t('ResistorColorCode.article')}</Article>
     </>
   );
 };

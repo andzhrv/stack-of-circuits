@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
-import { ImageWithInvert } from '@/components/entities/image-with-invert';
 import { LedResistorCalculator } from '@/components/features/led-resistor-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -55,20 +53,7 @@ const LedResistor = async ({
       <CalculatorWrapper>
         <LedResistorCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('LedResistor.article.title')}
-        </Title>
-        <ImageWithInvert
-          className="self-center"
-          src="/led-resistor-diagram.png"
-          width={300}
-          height={200}
-          alt="Circuit with LED and resistor"
-        />
-        <Paragraph>{t('LedResistor.article.paragraph')}</Paragraph>
-        <Paragraph>{t('LedResistor.article.paragraph2')}</Paragraph>
-      </Article>
+      <Article>{t('LedResistor.article')}</Article>
     </>
   );
 };

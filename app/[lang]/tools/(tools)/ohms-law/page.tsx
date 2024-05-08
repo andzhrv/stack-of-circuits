@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { OhmsLawCalculator } from '@/components/features/ohms-law-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -50,12 +49,7 @@ const OhmsLaw = async ({ params: { lang } }: { params: { lang: string } }) => {
       <CalculatorWrapper>
         <OhmsLawCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('OhmsLaw.article.title')}
-        </Title>
-        <Paragraph>{t('OhmsLaw.article.paragraph')}</Paragraph>
-      </Article>
+      <Article>{t('OhmsLaw.article')}</Article>
     </>
   );
 };

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { SmdResistorCodeCalculator } from '@/components/features/smd-resistor-code-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -54,12 +53,7 @@ const SmdResistorCode = async ({
       <CalculatorWrapper>
         <SmdResistorCodeCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('SmdResistorCode.article.title')}
-        </Title>
-        <Paragraph>{t('SmdResistorCode.article.paragraph')}</Paragraph>
-      </Article>
+      <Article>{t('SmdResistorCode.article')}</Article>
     </>
   );
 };

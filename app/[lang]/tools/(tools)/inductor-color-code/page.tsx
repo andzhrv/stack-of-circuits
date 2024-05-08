@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { InductorColorCodeCalculator } from '@/components/features/inductor-color-code-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -54,12 +53,7 @@ const InductorColorCode = async ({
       <CalculatorWrapper>
         <InductorColorCodeCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('InductorColorCode.article.title')}
-        </Title>
-        <Paragraph>{t('InductorColorCode.article.paragraph')}</Paragraph>
-      </Article>
+      <Article>{t('InductorColorCode.article')}</Article>
     </>
   );
 };

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
+import { Article } from '@/components/entities/article';
 import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { BatteryLifeCalculator } from '@/components/features/battery-life-calculator';
-import { Article } from '@/components/ui/article';
-import { Paragraph } from '@/components/ui/paragraph';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
 
@@ -54,12 +53,7 @@ const BatteryLife = async ({
       <CalculatorWrapper>
         <BatteryLifeCalculator />
       </CalculatorWrapper>
-      <Article>
-        <Title level={2} className="mb-4">
-          {t('BatteryLife.article.title')}
-        </Title>
-        <Paragraph>{t('BatteryLife.article.paragraph')}</Paragraph>
-      </Article>
+      <Article>{t('BatteryLife.article')}</Article>
     </>
   );
 };
