@@ -62,7 +62,7 @@ export const LedResistorCalculator = () => {
     <Card>
       <CardContent>
         <Label className="block mb-4 md:mb-5">
-          {t('form.supplyVoltage')}
+          {t('form.supplyVoltage')} (V<sub>s</sub>)
           <Input
             className="mt-2"
             {...supplyVoltageProps}
@@ -70,7 +70,7 @@ export const LedResistorCalculator = () => {
           />
         </Label>
         <Label className="block mb-4 md:mb-5">
-          {t('form.forwardVoltage')}
+          {t('form.forwardVoltage')} (V<sub>led</sub>)
           <Input
             className="mt-2"
             {...forwardVoltageProps}
@@ -78,7 +78,7 @@ export const LedResistorCalculator = () => {
           />
         </Label>
         <Label className="block mb-4 md:mb-5">
-          {t('form.forwardCurrent')}
+          {t('form.forwardCurrent')} (I<sub>led</sub>)
           <Input
             className="mt-2"
             {...forwardCurrentProps}
@@ -86,7 +86,7 @@ export const LedResistorCalculator = () => {
           />
         </Label>
         <Label className="block">
-          {t('form.numberOfLED')}
+          {t('form.numberOfLED')} (N)
           <Input className="mt-2" {...numberOfLEDProps} />
         </Label>
       </CardContent>

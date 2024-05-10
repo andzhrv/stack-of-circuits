@@ -1,12 +1,24 @@
 import { forwardRef, HTMLAttributes } from 'react';
 import Markdown, { Components } from 'react-markdown';
 import Image from 'next/image';
+import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 
 import { cn } from '@/lib/utils';
 
 import { Paragraph } from '../ui/paragraph';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '../ui/table';
 import { Title } from '../ui/title';
+
+import 'katex/dist/katex.min.css';
 
 const components: Partial<Components> = {
   h1: ({ children }) => <Title className="mb-4">{children}</Title>,
@@ -29,7 +41,13 @@ const components: Partial<Components> = {
   img: ({ src, alt }) =>
     typeof src === 'string' ? (
       <Image src={src} width={300} height={200} alt={alt || ''} />
-    ) : null
+    ) : null,
+  table: ({ children }) => <Table>{children}</Table>,
+  thead: ({ children }) => <TableHeader>{children}</TableHeader>,
+  tbody: ({ children }) => <TableBody>{children}</TableBody>,
+  tr: ({ children }) => <TableRow>{children}</TableRow>,
+  th: ({ children }) => <TableHead>{children}</TableHead>,
+  td: ({ children }) => <TableCell>{children}</TableCell>
 };
 
 const Article = forwardRef<
@@ -37,7 +55,11 @@ const Article = forwardRef<
   HTMLAttributes<HTMLDivElement> & { children: string | null | undefined }
 >(({ className, children, ...props }, ref) => (
   <article className={cn('flex flex-col my-8', className)} ref={ref} {...props}>
-    <Markdown components={components} remarkPlugins={[remarkGfm]}>
+    <Markdown
+      components={components}
+      remarkPlugins={[[remarkGfm, { singleTilde: false }], remarkMath]}
+      rehypePlugins={[rehypeKatex]}
+    >
       {children}
     </Markdown>
   </article>
