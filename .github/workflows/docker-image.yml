@@ -17,6 +17,6 @@ jobs:
     - name: Login
       run: echo '${{ secrets.YC_SA_JSON_CREDENTIALS }}' | docker login --username json_key --password-stdin cr.yandex
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cr.yandex/crpscepi51mor3q0mqog/soc-frontend:${{ github.sha }}
+      run: docker build . --file Dockerfile --tag cr.yandex/crpscepi51mor3q0mqog/soc-frontend:app
     - name: Push the Docker image
-      run: docker push cr.yandex/crpscepi51mor3q0mqog/soc-frontend:${{ github.sha }}
+      run: docker push cr.yandex/crpscepi51mor3q0mqog/soc-frontend:app
