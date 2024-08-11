@@ -16,19 +16,19 @@ export const VoltageDividerCalculator = () => {
   const [supplyVoltage, supplyVoltageProps] = useNumberInput({
     initialValue: '12',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [resistor1, resistor1Props] = useNumberInput({
     initialValue: '10',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [resistor2, resistor2Props] = useNumberInput({
     initialValue: '10',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const outputVoltage = (resistor2 / (resistor1 + resistor2)) * supplyVoltage;

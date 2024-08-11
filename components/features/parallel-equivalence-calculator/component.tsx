@@ -56,31 +56,31 @@ export const ParallelEquivalenceCalculator = () => {
   const [value1, value1Props] = useNumberInput({
     initialValue: '5',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [value2, value2Props] = useNumberInput({
     initialValue: '10',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [value3, value3Props] = useNumberInput({
     initialValue: '',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [value4, value4Props] = useNumberInput({
     initialValue: '',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [value5, value5Props] = useNumberInput({
     initialValue: '',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const resistance = calculateParallelEquivalence(

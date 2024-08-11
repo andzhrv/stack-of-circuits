@@ -21,25 +21,25 @@ export const LedResistorCalculator = () => {
   const [supplyVoltage, supplyVoltageProps] = useNumberInput({
     initialValue: '5',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [forwardVoltage, forwardVoltageProps] = useNumberInput({
     initialValue: '2,1',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [forwardCurrent, forwardCurrentProps] = useNumberInput({
     initialValue: '20',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [numberOfLED, numberOfLEDProps] = useNumberInput({
     initialValue: '1',
     minValue: 1,
-    maxValue: 100000,
+    maxValue: 1000000,
     isInteger: true
   });
 

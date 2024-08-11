@@ -22,19 +22,19 @@ export const OhmsLawCalculator = () => {
   const [voltageValue, voltageValueProps] = useNumberInput({
     initialValue: '5',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [currentValue, currentValueProps] = useNumberInput({
     initialValue: '0,25',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [resistanceValue, resistanceValueProps] = useNumberInput({
     initialValue: '20',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const { voltage, current, resistance, power } = calculateOhmsLaw({

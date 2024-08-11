@@ -19,13 +19,13 @@ export const useFormatTime = () => {
 
     return (
       [
-        days ? `${days}\u2009${t('days')}` : undefined,
-        hours ? `${hours}\u2009${t('hours')}` : undefined,
-        minutes ? `${minutes}\u2009${t('minutes')}` : undefined,
-        seconds ? `${seconds}\u2009${t('seconds')}` : undefined
+        days ? `${days}\u202F${t('days')}` : undefined,
+        hours ? `${hours}\u202F${t('hours')}` : undefined,
+        minutes ? `${minutes}\u202F${t('minutes')}` : undefined,
+        seconds ? `${seconds}\u202F${t('seconds')}` : undefined
       ]
         .filter(Boolean)
-        .join(' ') || `0\u2009${t('seconds')}`
+        .join(' ') || `0\u202F${t('seconds')}`
     );
   };
 };

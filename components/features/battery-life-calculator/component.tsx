@@ -21,37 +21,37 @@ export const BatteryLifeCalculator = () => {
   const [batteryCapacity, batteryCapacityProps] = useNumberInput({
     initialValue: '200',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [deviceLoadCurrent, deviceLoadCurrentProps] = useNumberInput({
     initialValue: '54',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [sleepModeTime, sleepModeTimeProps] = useNumberInput({
     initialValue: '900',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [sleepModeCurrent, sleepModeCurrentProps] = useNumberInput({
     initialValue: '0.1',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [awakeModeTime, awakeModeTimeProps] = useNumberInput({
     initialValue: '10',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const [awakeModeCurrent, awakeModeCurrentProps] = useNumberInput({
     initialValue: '240',
     minValue: 0,
-    maxValue: 100000
+    maxValue: 10000000000
   });
 
   const batteryLifetime = (batteryCapacity / deviceLoadCurrent) * 3600;
