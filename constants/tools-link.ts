@@ -45,6 +45,11 @@ export const getToolsLink = async (): Promise<
       title: t('BatteryLife.title'),
       href: '/tools/battery-life',
       description: t('BatteryLife.description')
+    },
+    {
+      title: t('VoltageRegulator.title'),
+      href: '/tools/voltage-regulator',
+      description: t('VoltageRegulator.description')
     }
   ];
 };

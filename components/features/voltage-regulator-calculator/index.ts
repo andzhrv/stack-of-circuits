@@ -1,0 +1,1 @@
+export { VoltageRegulatorCalculator } from './component';
