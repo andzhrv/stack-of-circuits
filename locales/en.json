@@ -25,6 +25,11 @@
     "description": "Calculation of the nominal value and tolerance of inductors by color code",
     "article": "## Calculation of the nominal inductance by color code\nThe inductors are marked with colored stripes that indicate the nominal value and tolerance. This calculator allows you to calculate the nominal value and tolerance of inductors. Calculation is supported for inductors with color markings in the form of 4 colored stripes."
   },
+  "LCResonantFrequency": {
+    "title": "Parallel LC Resonant Circuit Calculator",
+    "description": "Calculation of the resonant frequency of a parallel LC resonant circuit.",
+    "article": "## Calculation of the resonant frequency of a parallel LC resonant circuit\nAn LC resonant circuit is a circuit consisting of an inductor and a capacitor that are connected in parallel. When the capacitive and inductive resistances are equal, the circuit has a resonant frequency.\n![LC Resonant Frequency Circuit](/images/lc-resonant-frequency-circuit.jpg)\n\nThis calculator will help you calculate the third value if you know the other two parameters: inductance, capacitance, or resonant frequency.\n\nThe resonant frequency of the circuit is determined by the formula:\n\n$$f = \\frac{1}{(2\\pi\\sqrt{LC})}$$\n\nAn oscillatory process occurs in the circuit when the energy of the electric field is converted into the energy of the magnetic field and vice versa. The reactivities of the inductance and capacitance depend on the frequency of the alternating current.\n\nAs the frequency increases, the reactance of the inductor increases, and the capacitance decreases. When the frequency decreases, the opposite is true: the inductive resistance decreases, and the capacitive resistance increases.\n\nAt a certain frequency, the capacitance of the capacitor becomes equal to the inductive resistance of the coil. This is called current resonance.\n\nThe reactivities of the inductor and capacitor can be calculated using the formulas:\n\n$$X_L = 2 \\pi f L$$\n\n$$X_C = \\frac{1}{(2 \\pi f C)}$$\n\nThe resonant effect of LC circuits has many important applications in the processing of analog and radio frequency signals. For example, it is used in notch filters, bandpass filters, and generators."
+  },
   "LedResistor": {
     "title": "LED Resistor Calculator",
     "description": "Calculation of a current limiting resistor for one or more LEDs connected in series. This calculator is ideal when you have one or more consecutive LEDs and you need to calculate which resistance resistor needs to be connected to the circuit.",
@@ -92,6 +97,26 @@
       "tolerance": "Tolerance"
     },
     "result": { "value": "Inductor value", "tolerance": "Tolerance" }
+  },
+  "LCResonantFrequencyCalculator": {
+    "mode": {
+      "frequency": "Frequency",
+      "inductance": "Inductance",
+      "capacitance": "Capacitance"
+    },
+    "form": {
+      "inductance": "Inductance",
+      "inductanceUnit": "H",
+      "capacitance": "Capacitance",
+      "capacitanceUnit": "µF",
+      "frequency": "Frequency",
+      "frequencyUnit": "Hz"
+    },
+    "result": {
+      "frequency": "Frequency",
+      "inductance": "Inductance",
+      "capacitance": "Capacitance"
+    }
   },
   "LedResistorCalculator": {
     "form": {
@@ -217,6 +242,7 @@
     "resistance": "Ω.kΩ.MΩ.GΩ",
     "capacity": "pF.nF.µF.mF.F",
     "inductance": "nH.µH.mH.H",
-    "power": "mW.W.kW.MW"
+    "power": "mW.W.kW.MW",
+    "frequency": "Hz.kHz.MHz.GHz.THz"
   }
 }

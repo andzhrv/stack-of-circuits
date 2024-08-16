@@ -1,0 +1,1 @@
+export { LCResonantFrequencyCalculator } from './component';

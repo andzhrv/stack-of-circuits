@@ -50,6 +50,11 @@ export const getToolsLink = async (): Promise<
       title: t('VoltageRegulator.title'),
       href: '/tools/voltage-regulator',
       description: t('VoltageRegulator.description')
+    },
+    {
+      title: t('LCResonantFrequency.title'),
+      href: '/tools/lc-resonant-frequency',
+      description: t('LCResonantFrequency.description')
     }
   ];
 };

@@ -6,7 +6,8 @@ export const enum Unit {
   Resistance = 'resistance',
   Capacity = 'capacity',
   Inductance = 'inductance',
-  Power = 'power'
+  Power = 'power',
+  Frequency = 'frequency'
 }
 
 const getValueExp = (value: number, maxExp: number): number => {
@@ -32,7 +33,8 @@ export const useFormatUnits = () => {
     [Unit.Resistance]: t('resistance').split('.'),
     [Unit.Capacity]: t('capacity').split('.'),
     [Unit.Inductance]: t('inductance').split('.'),
-    [Unit.Power]: t('power').split('.')
+    [Unit.Power]: t('power').split('.'),
+    [Unit.Frequency]: t('frequency').split('.')
   };
 
   return (
