@@ -5,13 +5,14 @@ import Script from 'next/script';
 import { Footer } from '@/components/features/footer';
 import { Header } from '@/components/features/header';
 import { ThemeProvider } from '@/components/theme-provider';
+import { BASE_URL } from '@/constants';
 import { cn } from '@/lib/utils';
 import { I18nProviderClient } from '@/locales/client';
 
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://stackofcircuits.com'),
+  metadataBase: new URL(BASE_URL),
   title: {
     template: '%s / Stack of Circuits',
     default: 'Stack of Circuits'

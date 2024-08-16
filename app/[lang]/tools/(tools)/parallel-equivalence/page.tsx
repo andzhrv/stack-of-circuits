@@ -6,6 +6,7 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { ParallelEquivalenceCalculator } from '@/components/features/parallel-equivalence-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/tools/parallel-equivalence',
-        'x-default': '/tools/parallel-equivalence',
-        ru: '/ru/tools/parallel-equivalence'
-      }
-    }
+    alternates: getAlternateURLs('/tools/parallel-equivalence', lang)
   };
 };
 

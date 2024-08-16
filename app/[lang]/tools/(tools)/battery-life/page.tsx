@@ -6,6 +6,7 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { BatteryLifeCalculator } from '@/components/features/battery-life-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/tools/battery-life',
-        'x-default': '/tools/battery-life',
-        ru: '/ru/tools/battery-life'
-      }
-    }
+    alternates: getAlternateURLs('/tools/battery-life', lang)
   };
 };
 

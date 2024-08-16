@@ -6,6 +6,7 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { ResistorColorCodeCalculator } from '@/components/features/resistor-color-code-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/tools/resistor-color-code',
-        'x-default': '/tools/resistor-color-code',
-        ru: '/ru/tools/resistor-color-code'
-      }
-    }
+    alternates: getAlternateURLs('/tools/resistor-color-code', lang)
   };
 };
 

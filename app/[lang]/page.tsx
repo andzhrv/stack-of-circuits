@@ -5,6 +5,7 @@ import { LinksList, LinksListItem } from '@/components/ui/links-list';
 import { Title } from '@/components/ui/title';
 import { getToolsLink } from '@/constants/tools-link';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/',
-        'x-default': '/',
-        ru: '/ru'
-      }
-    }
+    alternates: getAlternateURLs('/', lang)
   };
 };
 

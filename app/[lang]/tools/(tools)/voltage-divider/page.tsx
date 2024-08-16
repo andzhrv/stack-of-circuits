@@ -6,6 +6,7 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { VoltageDividerCalculator } from '@/components/features/voltage-divider-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/tools/voltage-divider',
-        'x-default': '/tools/voltage-divider',
-        ru: '/ru/tools/voltage-divider'
-      }
-    }
+    alternates: getAlternateURLs('/tools/voltage-divider', lang)
   };
 };
 

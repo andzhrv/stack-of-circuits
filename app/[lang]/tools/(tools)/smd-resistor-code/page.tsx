@@ -6,6 +6,7 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { SmdResistorCodeCalculator } from '@/components/features/smd-resistor-code-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
@@ -24,13 +25,7 @@ export const generateMetadata = async ({
       locale: lang,
       type: 'website'
     },
-    alternates: {
-      languages: {
-        en: '/tools/smd-resistor-code',
-        'x-default': '/tools/smd-resistor-code',
-        ru: '/ru/tools/smd-resistor-code'
-      }
-    }
+    alternates: getAlternateURLs('/tools/smd-resistor-code', lang)
   };
 };
 
