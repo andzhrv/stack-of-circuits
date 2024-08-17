@@ -1,11 +1,16 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
-type UseNumberInput = (options?: {
+import { clearNumberValue } from '@/utils/clear-number-value';
+import { parseNumberValue } from '@/utils/parse-number-value';
+
+interface UseNumberInputOptions {
   initialValue?: string;
   minValue?: number;
   maxValue?: number;
   isInteger?: boolean;
-}) => [
+}
+
+type UseNumberInputReturns = [
   number,
   {
     value: string;
@@ -14,37 +19,26 @@ type UseNumberInput = (options?: {
   }
 ];
 
-const numberRegExp = /\d*[.,]?\d*/;
-const numberWithNegativeRegExp = /-?\d*[.,]?\d*/;
-
-export const useNumberInput: UseNumberInput = (options) => {
+export const useNumberInput = (
+  options?: UseNumberInputOptions
+): UseNumberInputReturns => {
   const { initialValue, minValue, maxValue, isInteger } = options ?? {};
   const [value, setValue] = useState<string>('');
   const [parsedValue, setParsedValue] = useState<number>(NaN);
 
   const handleChange = (value: string) => {
-    const clearedValue =
-      value
-        .replace(/\s/g, '')
-        .match(
-          minValue && minValue < 0 ? numberWithNegativeRegExp : numberRegExp
-        )
-        ?.join('')
-        .replace(/([,.])/, isInteger ? '' : '$1') ?? '';
-
-    const parsedValue = isNaN(parseFloat(clearedValue))
-      ? clearedValue
-      : parseFloat(clearedValue.replace(',', '.'));
+    const clearedValue = clearNumberValue(value, minValue, isInteger);
+    const parsedValue = parseNumberValue(clearedValue);
 
     if (
-      typeof parsedValue === 'number' &&
+      isNaN(parsedValue) &&
       ((minValue && parsedValue < minValue) ||
         (maxValue && parsedValue > maxValue))
     ) {
       return;
     }
 
-    setParsedValue(typeof parsedValue === 'number' ? parsedValue : NaN);
+    setParsedValue(parsedValue);
     setValue(clearedValue);
   };
 

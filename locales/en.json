@@ -177,6 +177,16 @@
       "capacitor": "Capacitor",
       "inductor": "Inductor"
     },
+    "addButton": {
+      "resistor": "Add a resistor",
+      "capacitor": "Add a capacitor",
+      "inductor": "Add inductance"
+    },
+    "removeButton": {
+      "resistor": "Remove the resistor",
+      "capacitor": "Remove the capacitor",
+      "inductor": "Remove the inductance"
+    },
     "unitName": { "resistor": "Ω", "capacitor": "µF", "inductor": "µH" },
     "resultTitle": {
       "resistor": "Equivalent resistance",

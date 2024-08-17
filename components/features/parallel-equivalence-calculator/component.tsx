@@ -1,13 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { TrashIcon } from '@radix-ui/react-icons';
 
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useNumberInput } from '@/hooks/use-number-input';
+import { useNumberInputsList } from '@/hooks/use-number-inputs-list';
 import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
@@ -23,29 +25,38 @@ const enum Component {
 const useComponentConfig = () => {
   const t = useScopedI18n('ParallelEquivalenceCalculator');
 
-  return {
-    [Component.Resistor]: {
-      name: t('componentName.resistor'),
-      unit: Unit.Resistance,
-      unitNumber: 0,
-      unitName: t('unitName.resistor'),
-      resultTitle: t('resultTitle.resistor')
-    },
-    [Component.Capacitor]: {
-      name: t('componentName.capacitor'),
-      unit: Unit.Capacity,
-      unitNumber: 2,
-      unitName: t('unitName.capacitor'),
-      resultTitle: t('resultTitle.capacitor')
-    },
-    [Component.Inductor]: {
-      name: t('componentName.inductor'),
-      unit: Unit.Inductance,
-      unitNumber: 1,
-      unitName: t('unitName.inductor'),
-      resultTitle: t('resultTitle.inductor')
-    }
-  };
+  return useMemo(
+    () => ({
+      [Component.Resistor]: {
+        name: t('componentName.resistor'),
+        addButtonText: t('addButton.resistor'),
+        removeButtonText: t('removeButton.resistor'),
+        unit: Unit.Resistance,
+        unitNumber: 0,
+        unitName: t('unitName.resistor'),
+        resultTitle: t('resultTitle.resistor')
+      },
+      [Component.Capacitor]: {
+        name: t('componentName.capacitor'),
+        addButtonText: t('addButton.capacitor'),
+        removeButtonText: t('removeButton.capacitor'),
+        unit: Unit.Capacity,
+        unitNumber: 2,
+        unitName: t('unitName.capacitor'),
+        resultTitle: t('resultTitle.capacitor')
+      },
+      [Component.Inductor]: {
+        name: t('componentName.inductor'),
+        addButtonText: t('addButton.inductor'),
+        removeButtonText: t('removeButton.inductor'),
+        unit: Unit.Inductance,
+        unitNumber: 1,
+        unitName: t('unitName.inductor'),
+        resultTitle: t('resultTitle.inductor')
+      }
+    }),
+    [t]
+  );
 };
 
 export const ParallelEquivalenceCalculator = () => {
@@ -53,38 +64,15 @@ export const ParallelEquivalenceCalculator = () => {
   const componentConfig = useComponentConfig();
   const [component, setComponent] = useState<Component>(Component.Resistor);
 
-  const [value1, value1Props] = useNumberInput({
-    initialValue: '5',
-    minValue: 0,
-    maxValue: 10000000000
-  });
-
-  const [value2, value2Props] = useNumberInput({
-    initialValue: '10',
-    minValue: 0,
-    maxValue: 10000000000
-  });
-
-  const [value3, value3Props] = useNumberInput({
-    initialValue: '',
-    minValue: 0,
-    maxValue: 10000000000
-  });
-
-  const [value4, value4Props] = useNumberInput({
-    initialValue: '',
-    minValue: 0,
-    maxValue: 10000000000
-  });
-
-  const [value5, value5Props] = useNumberInput({
-    initialValue: '',
-    minValue: 0,
-    maxValue: 10000000000
-  });
+  const [values, valuesProps, handleAddInput, handleRemoveInput] =
+    useNumberInputsList({
+      initialValues: ['5', '10'],
+      minValue: 0,
+      maxValue: 10000000000
+    });
 
   const resistance = calculateParallelEquivalence(
-    [value1, value2, value3, value4, value5],
+    values,
     component === 'capacitor' ? 'forward' : 'backwards'
   );
 
@@ -108,46 +96,31 @@ export const ParallelEquivalenceCalculator = () => {
       </Tabs>
       <Card>
         <CardContent>
-          <Label className="block mb-4 md:mb-5">
-            {`${componentConfig[component].name} 1`}
-            <Input
-              className="mt-2"
-              {...value1Props}
-              rightSection={componentConfig[component].unitName}
-            />
-          </Label>
-          <Label className="block mb-4 md:mb-5">
-            {`${componentConfig[component].name} 2`}
-            <Input
-              className="mt-2"
-              {...value2Props}
-              rightSection={componentConfig[component].unitName}
-            />
-          </Label>
-          <Label className="block mb-4 md:mb-5">
-            {`${componentConfig[component].name} 3`}
-            <Input
-              className="mt-2"
-              {...value3Props}
-              rightSection={componentConfig[component].unitName}
-            />
-          </Label>
-          <Label className="block mb-4 md:mb-5">
-            {`${componentConfig[component].name} 4`}
-            <Input
-              className="mt-2"
-              {...value4Props}
-              rightSection={componentConfig[component].unitName}
-            />
-          </Label>
-          <Label className="block mb-4 md:mb-5">
-            {`${componentConfig[component].name} 5`}
-            <Input
-              className="mt-2"
-              {...value5Props}
-              rightSection={componentConfig[component].unitName}
-            />
-          </Label>
+          {valuesProps.map((props, index) => (
+            <div key={index} className="flex items-end">
+              <Label className="block basis-full mb-4 md:mb-5">
+                {`${componentConfig[component].name} ${index + 1}`}
+                <Input
+                  className="mt-2"
+                  {...props}
+                  rightSection={componentConfig[component].unitName}
+                />
+              </Label>
+              <Button
+                className="ml-2 mb-4 md:mb-5"
+                aria-label={componentConfig[component].removeButtonText}
+                onClick={() => handleRemoveInput(index)}
+                disabled={values.length < 3}
+                variant="destructive"
+                size="icon"
+              >
+                <TrashIcon />
+              </Button>
+            </div>
+          ))}
+          <Button onClick={handleAddInput} disabled={values.length === 15}>
+            {componentConfig[component].addButtonText}
+          </Button>
         </CardContent>
         <CardFooter className="flex flex-col items-start">
           <Statistic

@@ -180,6 +180,16 @@
       "capacitor": "Конденсатор",
       "inductor": "Индуктивность"
     },
+    "addButton": {
+      "resistor": "Добавить резистор",
+      "capacitor": "Добавить конденсатор",
+      "inductor": "Добавить индуктивность"
+    },
+    "removeButton": {
+      "resistor": "Удалить резистор",
+      "capacitor": "Удалить конденсатор",
+      "inductor": "Удалить индуктивность"
+    },
     "unitName": { "resistor": "Ом", "capacitor": "мкФ", "inductor": "мкГн" },
     "resultTitle": {
       "resistor": "Эквивалентное сопротивление",
