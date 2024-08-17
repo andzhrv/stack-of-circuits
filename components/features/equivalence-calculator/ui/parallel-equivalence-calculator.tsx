@@ -114,7 +114,7 @@ export const ParallelEquivalenceCalculator = () => {
                 variant="destructive"
                 size="icon"
               >
-                <TrashIcon />
+                <TrashIcon className="h-[1.2rem] w-[1.2rem]" />
               </Button>
             </div>
           ))}
