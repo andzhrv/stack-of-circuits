@@ -50,6 +50,11 @@
     "description": "Calculation of the equivalence value of parallel resistors, capacitors and inductors",
     "article": "## Calculating the equivalence of a parallel connection\nThis calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.This calculator allows you to calculate the equivalent of parallel connected resistors, capacitors and inductors. To calculate, select the required element and enter the values."
   },
+  "SeriesEquivalence": {
+    "title": "Series Equivalence Calculator",
+    "description": "Calculation of the equivalence value of series resistors, capacitors and inductors",
+    "article": "## Calculating the equivalence of a series connection\nThis calculator allows you to calculate the equivalent of series connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.This calculator allows you to calculate the equivalent of series connected resistors, capacitors and inductors. To calculate, select the required element and enter the values."
+  },
   "ResistorColorCode": {
     "title": "Resistor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of resistors by color code",
@@ -171,7 +176,7 @@
       "power": "Power"
     }
   },
-  "ParallelEquivalenceCalculator": {
+  "EquivalenceCalculator": {
     "componentName": {
       "resistor": "Resistor",
       "capacitor": "Capacitor",

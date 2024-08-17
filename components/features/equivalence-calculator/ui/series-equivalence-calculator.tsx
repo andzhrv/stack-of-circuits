@@ -14,7 +14,7 @@ import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
 import { Unit, useFormatUnits } from '@/utils/format-units';
 
-import { calculateParallelEquivalence } from './utils';
+import { calculateEquivalence } from '../utils/calculate-equivalence';
 
 const enum Component {
   Resistor = 'resistor',
@@ -23,7 +23,7 @@ const enum Component {
 }
 
 const useComponentConfig = () => {
-  const t = useScopedI18n('ParallelEquivalenceCalculator');
+  const t = useScopedI18n('EquivalenceCalculator');
 
   return useMemo(
     () => ({
@@ -59,7 +59,7 @@ const useComponentConfig = () => {
   );
 };
 
-export const ParallelEquivalenceCalculator = () => {
+export const SeriesEquivalenceCalculator = () => {
   const formatUnits = useFormatUnits();
   const componentConfig = useComponentConfig();
   const [component, setComponent] = useState<Component>(Component.Resistor);
@@ -71,12 +71,12 @@ export const ParallelEquivalenceCalculator = () => {
       maxValue: 10000000000
     });
 
-  const resistance = calculateParallelEquivalence(
+  const resistance = calculateEquivalence(
     values,
-    component === 'capacitor' ? 'forward' : 'backwards'
+    component === 'capacitor' ? 'backwards' : 'forward'
   );
 
-  useTrackResultChange('parallel-equivalence-change', resistance);
+  useTrackResultChange('series-equivalence-change', resistance);
 
   return (
     <>

@@ -37,6 +37,11 @@ export const getToolsLink = async (): Promise<
       description: t('ParallelEquivalence.description')
     },
     {
+      title: t('SeriesEquivalence.title'),
+      href: '/tools/series-equivalence',
+      description: t('SeriesEquivalence.description')
+    },
+    {
       title: t('VoltageDivider.title'),
       href: '/tools/voltage-divider',
       description: t('VoltageDivider.description')

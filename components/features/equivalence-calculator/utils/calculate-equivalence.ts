@@ -1,4 +1,4 @@
-export const calculateParallelEquivalence = (
+export const calculateEquivalence = (
   values: number[],
   mode: 'forward' | 'backwards'
 ) => {
