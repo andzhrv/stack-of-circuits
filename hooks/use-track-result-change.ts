@@ -13,7 +13,6 @@ export const useTrackResultChange = (
 
   useEffect(() => {
     if (value && !valueRef.current) {
-      console.log(value);
       valueRef.current = value;
     } else if (
       valueRef.current &&
