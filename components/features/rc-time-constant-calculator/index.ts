@@ -1,0 +1,1 @@
+export { RCTimeConstantCalculator } from './component';

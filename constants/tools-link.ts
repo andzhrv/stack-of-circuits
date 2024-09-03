@@ -60,6 +60,11 @@ export const getToolsLink = async (): Promise<
       title: t('LCResonantFrequency.title'),
       href: '/tools/lc-resonant-frequency',
       description: t('LCResonantFrequency.description')
+    },
+    {
+      title: t('RCTimeConstant.title'),
+      href: '/tools/rc-time-constant',
+      description: t('RCTimeConstant.description')
     }
   ];
 };

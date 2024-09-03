@@ -55,6 +55,11 @@
     "description": "Calculation of the equivalence value of series resistors, capacitors and inductors",
     "article": "## Calculating the equivalence of a series connection\nThis calculator allows you to calculate the equivalent of series connected resistors, capacitors and inductors. To calculate, select the required element and enter the values.\n\nWhen connecting resistors and inductors in series, their ratings add up. If you connect series capacitors, their equivalent capacitance, on the contrary, will decrease.\n\n### Application\nThe use of several series-connected capacitors allows you to increase the total allowable voltage that can be applied to them. For example, if you need to connect a capacitor to a 230\u202FV circuit and no suitable capacitor is available, you can use two 200\u202FV capacitors connected in series, in which case their total allowable voltage will be 400\u202FV."
   },
+  "RCTimeConstant": {
+    "title": "RC Time Constant Calculator",
+    "description": "Calculation of the time constant (in seconds) of a resistor–capacitor circuit.",
+    "article": "## Calculation of the time constant of the RC circuit\nThe time constant of a serial RC circuit is equal to the product of resistance and capacitance. If two of the three values — resistance, capacitance, or RC time constant-are present, this tool will calculate the missing third variable.\n\n![A series RC charging circuit](/images/rc-time-constant-circuit.jpg)\n\nIn an electrical circuit consisting of a capacitance and resistance connected in series, the voltage source $V_S$ is initially isolated from a resistor $R$ and a capacitor $C$ connected in series by an open switch. When the switch is closed, current will flow in the circuit, the capacitor will start charging, and the voltage at its terminals will increase exponentially, and the current flowing in the circuit will decrease exponentially.\n\n### Calculation formula\nThe charging and discharging rate of successive RC circuits is characterized by the RC time constant, which is denoted by – $\\tau$, calculated by the following equation:\n\n$$\n\\tau = R * C\n$$\n\nWhere:\n\n$\\tau$ – time constant in seconds\n\n$R$ – resistance in ohms\n\n$C$ – capacitance in farads\n\n### Application\nRC circuits are widely used as timing elements."
+  },
   "ResistorColorCode": {
     "title": "Resistor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of resistors by color code",
@@ -176,6 +181,30 @@
       "power": "Power"
     }
   },
+  "RCTimeConstantCalculator": {
+    "mode": {
+      "timeConstant": "Time",
+      "capacitance": "Capacitance",
+      "resistance": "Resistance"
+    },
+    "form": {
+      "capacitance": "Capacitance",
+      "capacitanceUnit": "µF",
+      "resistance": "Resistance",
+      "resistanceUnit": "Ohm",
+      "timeConstant": "Time Constant",
+      "timeConstantUnit": "ms",
+      "voltage": "Voltage",
+      "voltageUnit": "V"
+    },
+    "result": {
+      "timeConstant": "Time Constant",
+      "capacitance": "Capacitance",
+      "resistance": "Resistance",
+      "maxCurrent": "Maximum Current",
+      "charge": "Charge of the circuit"
+    }
+  },
   "EquivalenceCalculator": {
     "componentName": {
       "resistor": "Resistor",
@@ -249,7 +278,8 @@
     "days": "d",
     "hours": "h",
     "minutes": "min",
-    "seconds": "s"
+    "seconds": "s",
+    "milliseconds": "ms"
   },
   "useFormatUnits": {
     "voltage": "mV.V.kV.MV",
@@ -258,6 +288,7 @@
     "capacity": "pF.nF.µF.mF.F",
     "inductance": "nH.µH.mH.H",
     "power": "mW.W.kW.MW",
-    "frequency": "Hz.kHz.MHz.GHz.THz"
+    "frequency": "Hz.kHz.MHz.GHz.THz",
+    "charge": "pC.nC.μC.mC.C"
   }
 }
