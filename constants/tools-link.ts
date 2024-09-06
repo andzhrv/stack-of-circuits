@@ -65,6 +65,11 @@ export const getToolsLink = async (): Promise<
       title: t('RCTimeConstant.title'),
       href: '/tools/rc-time-constant',
       description: t('RCTimeConstant.description')
+    },
+    {
+      title: t('CapacitorCode.title'),
+      href: '/tools/capacitor-code',
+      description: t('CapacitorCode.description')
     }
   ];
 };

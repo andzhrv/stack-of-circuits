@@ -3,6 +3,7 @@ import { ChangeEventHandler, useState } from 'react';
 type UseInputState = (options?: {
   initialValue?: string;
   validation?: RegExp;
+  validationFn?: (value: string) => boolean;
 }) => [string, ChangeEventHandler<HTMLInputElement>];
 
 export const useInputState: UseInputState = (options) => {
@@ -13,8 +14,8 @@ export const useInputState: UseInputState = (options) => {
 
     if (
       newValue !== '' &&
-      options?.validation &&
-      !options.validation.test(newValue)
+      ((options?.validation && !options.validation.test(newValue)) ||
+        (options?.validationFn && !options.validationFn(newValue)))
     ) {
       return;
     }

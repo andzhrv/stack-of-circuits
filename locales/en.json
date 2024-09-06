@@ -20,6 +20,11 @@
     "description": "Calculation of the battery life of the device from the battery or accumulator",
     "article": "## Calculation of the battery life of the device from the battery\nThis calculator provides two options — basic and advanced — to determine the expected battery life of the device. To calculate, you must specify the battery capacity, as well as the current consumed by the device."
   },
+  "CapacitorCode": {
+    "title": "Capacitor Marking Calculator",
+    "description": "Calculation of the nominal value of the capacitor according to the marking",
+    "article": "## Calculation of the nominal value of the capacitor by symbolic marking\nThe capacitors are marked with numbers and letters that indicate the nominal value of the capacitor. This calculator allows you to calculate the nominal value for various capacitors: film, ceramic, tantalum and mica."
+  },
   "InductorColorCode": {
     "title": "Inductor Color Code Calculator",
     "description": "Calculation of the nominal value and tolerance of inductors by color code",
@@ -98,6 +103,10 @@
       "awakeModeCurrentUnit": "mA"
     },
     "result": { "batteryLifetime": "Battery lifetime" }
+  },
+  "CapacitorCodeCalculator": {
+    "form": { "code": "Capacitor marking", "note": "Instead of the symbol µ, you can use the letter m" },
+    "result": { "value": "Capacitor value", "tolerance": "Tolerance", "tke": "TKE", "voltage": "Voltage" }
   },
   "InductorColorCodeCalculator": {
     "form": {

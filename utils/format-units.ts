@@ -55,6 +55,6 @@ export const useFormatUnits = () => {
     const formattedValue =
       Math.round((reducedValue / 1000 ** exp) * 1000) / 1000;
 
-    return `${formattedValue} ${units[unit][exp]}`;
+    return `${formattedValue}\u202F${units[unit][exp]}`;
   };
 };
