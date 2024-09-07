@@ -70,6 +70,11 @@ export const getToolsLink = async (): Promise<
       title: t('CapacitorCode.title'),
       href: '/tools/capacitor-code',
       description: t('CapacitorCode.description')
+    },
+    {
+      title: t('OperationalAmplifier.title'),
+      href: '/tools/operational-amplifier',
+      description: t('OperationalAmplifier.description')
     }
   ];
 };

@@ -50,6 +50,11 @@
     "description": "Calculation of electrical circuit parameters using Ohm's law",
     "article": "## Calculation of electrical circuit parameters using Ohm's law\nThis calculator allows you to calculate voltage, resistance or current if you set any two other parameters. To use this tool, select the parameter to be calculated and enter the values of the other two parameters of the electrical circuit."
   },
+  "OperationalAmplifier": {
+    "title": "Operational Amplifier Calculator",
+    "description": "Calculation of operational amplifier parameters",
+    "article": "## Calculation of operational amplifier parameters\nThis calculator will help you calculate the output voltage and gain values for inverting, non-inverting, and differential switching of an op-amp. To calculate, enter the values of the resistors and input voltage.\n\nAn operational amplifier (Op-amp) is a high-gain DC amplifier with a differential input and a single output. The three simplest op-amp switching schemes are inverting, non-inverting, and differential amplifiers. The terms \"inverting\" and \"non-inverting\" refer to the polarity of the output voltage relative to the input. The inverting amplifier outputs an output voltage whose polarity is opposite to that of the input voltage. A non-inverting amplifier does not change the polarity of the input voltage.\n\n### Application\nDesigning with op-amps is much easier than creating individual amplifiers from individual components. The resulting schemas are easily customized to meet the needs of a specific application. The main method of implementing op-amps is to use negative feedback. In typical inverting and non-inverting configurations, the feedback circuit consists of two resistors. The gain of the finished circuit is almost entirely determined by the values of these two resistors."
+  },
   "ParallelEquivalence": {
     "title": "Parallel Equivalence Calculator",
     "description": "Calculation of the equivalence value of parallel resistors, capacitors and inductors",
@@ -188,6 +193,25 @@
       "current": "Current",
       "resistance": "Resistance",
       "power": "Power"
+    }
+  },
+  "OperationalAmplifierCalculator": {
+    "mode": {
+      "differential": "Differential",
+      "nonInverting": "Non-Inverting",
+      "inverting": "Inverting"
+    },
+    "form": {
+      "inputResistor": "Input Resistor (R\u202Fin)",
+      "inputResistorUnit": "Ohm",
+      "feedbackResistor": "Feedback Resistor (R\u202Ffb)",
+      "feedbackResistorUnit": "Ohm",
+      "inputAmplitude": "Input Amplitude (V\u202Fin)",
+      "inputAmplitudeUnit": "V"
+    },
+    "result": {
+      "gain": "Gain",
+      "outputAmplitude": "Output Amplitude"
     }
   },
   "RCTimeConstantCalculator": {

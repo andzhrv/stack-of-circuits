@@ -41,20 +41,23 @@ export const useFormatUnits = () => {
 
   return (
     value: number | undefined,
-    unit: Unit,
+    unit?: Unit,
     unitNumber: number = 0
   ): string => {
-    if (typeof value !== 'number' || isNaN(value) || value < 0) {
+    if (typeof value !== 'number' || isNaN(value)) {
       return '\u2014';
     }
 
     const reducedValue = value * 1000 ** unitNumber;
 
-    const exp = getValueExp(reducedValue, units[unit].length - 1);
+    const exp = getValueExp(
+      Math.abs(reducedValue),
+      unit ? units[unit].length - 1 : 1
+    );
 
     const formattedValue =
       Math.round((reducedValue / 1000 ** exp) * 1000) / 1000;
 
-    return `${formattedValue}\u202F${units[unit][exp]}`;
+    return `${formattedValue}` + (unit ? `\u202F${units[unit][exp]}` : '');
   };
 };
