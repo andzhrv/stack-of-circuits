@@ -6,13 +6,12 @@ import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
 import { SmdResistorCodeCalculator } from '@/components/features/smd-resistor-code-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { PageParams } from '@/types';
 import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
-}: {
-  params: { lang: string };
-}): Promise<Metadata> => {
+}: PageParams): Promise<Metadata> => {
   const t = await getI18n();
 
   return {
@@ -33,11 +32,7 @@ export const generateStaticParams = () => {
   return getStaticParams();
 };
 
-const SmdResistorCode = async ({
-  params: { lang }
-}: {
-  params: { lang: string };
-}) => {
+const SmdResistorCode = async ({ params: { lang } }: PageParams) => {
   setStaticParamsLocale(lang);
 
   const t = await getI18n();

@@ -5,13 +5,12 @@ import { LinksList, LinksListItem } from '@/components/ui/links-list';
 import { Title } from '@/components/ui/title';
 import { getToolsLink } from '@/constants/tools-link';
 import { getI18n, getStaticParams } from '@/locales/server';
+import { PageParams } from '@/types';
 import { getAlternateURLs } from '@/utils/get-alternate-urls';
 
 export const generateMetadata = async ({
   params: { lang }
-}: {
-  params: { lang: string };
-}): Promise<Metadata> => {
+}: PageParams): Promise<Metadata> => {
   const t = await getI18n();
 
   return {
