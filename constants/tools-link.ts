@@ -75,6 +75,11 @@ export const getToolsLink = async (): Promise<
       title: t('OperationalAmplifier.title'),
       href: '/tools/operational-amplifier',
       description: t('OperationalAmplifier.description')
+    },
+    {
+      title: t('Multivibrator.title'),
+      href: '/tools/multivibrator',
+      description: t('Multivibrator.description')
     }
   ];
 };

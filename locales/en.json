@@ -40,6 +40,11 @@
     "description": "Calculation of a current limiting resistor for one or more LEDs connected in series. This calculator is ideal when you have one or more consecutive LEDs and you need to calculate which resistance resistor needs to be connected to the circuit.",
     "article": "## Calculation of the current limiting resistor for LEDs\n![Circuit with LED and resistor](/images/led-resistor-diagram.jpg)\n\nEach LED has a maximum allowable current with which it can operate normally. Even a short-term excess of this maximum current will damage the LED. Thus, it is necessary to limit the current flowing through the LED, one of the ways is to connect a current-limiting resistor in series. It is important to note that this method is not recommended for high-power LEDs that need a full-fledged current regulator.\n\nThis calculator allows you to calculate the value of the current limiting resistor, which must be connected in series to the LEDs to limit the current. To do this, enter the specified values. The calculator will also calculate the power dissipated by the resistor, which will help you select the necessary power resistor.\n## Calculation formula\n$$\nR = \\frac{V_s - V_{led} * N}{I_{led}}\n$$\n\nWhere:\n\n$V_s$ – The voltage of the power supply.\n\n$V_{led}$ – Direct voltage. Voltage drop at the p-n junction of the LED.\n\n$I_{led}$ – Forward current. The current at which the LED will work normally will not overheat and the p-n junction will not be broken. For LEDs with a diameter of 3 mm and 5 mm, it is usually 10-30 mA.\n\n$N$ – The number of LEDs connected in series.\n\nThe table below shows the approximate values of the voltage drop on LEDs of different colors:\n\n| LED Color | Voltage Drop (V) |\n|---|---|\n| Infrared | 1.9 |\n| Red | 1.6\u2009-\u20092.03 |\n| Orange | 2.03\u2009-\u20092.1 |\n| Yellow | 2.1\u2009-\u20092.18 |\n| Green | 1.9\u2009-\u20094 |\n| Blue | 2.48\u2009-\u20093.7 |\n| Violet | 2.76\u2009-\u20094 |\n| Ultraviolet | 3.1\u2009-\u20094.4 |"
   },
+  "Multivibrator": {
+    "title": "Multivibrator calculator based on NE555",
+    "description": "Calculation of the time-consuming components of a multivibrator based on NE555.",
+    "article": "## Calculation of the time-consuming components of a multivibrator\nThis calculator will help you calculate the frequency and fill factor of the multivibrator signals based on the NE555 timer chip. A circuit for generating rectangular pulses can be built on the basis of the NE555 timer chip. A multivibrator is a relaxation generator that produces a rectangular signal. The word \"relaxation\" means that the elements that make up the multivibrator do not have the ability to resonate. The figure below shows the NE555-based multivibrator circuit.\n![The NE555-based multivibrator circuit](/images/multivibrator-circuit.jpg)\nThe circuit uses external timing components: $R_A$, $R_B$, $C$, and the amplitude of the output signal is equal to the supply voltage of the chip, which can be 5-12 Volts. The formulas for calculating the signal parameters are presented below:\n$$\nf = \\frac{1}{ln(2) * C * (R_A + 2R_B)}\n$$\n\n$$\nT_{high} = ln(2) * C * (R_A + R_B)\n$$\n\n$$\nT_{low} = ln(2) * C * R_B\n$$\n\n$$\nD = \\frac{T_{high}}{T_{low} + T_{high}} = \\frac{R_A + R_B}{R_A + 2R_B}\n$$"
+  },
   "VoltageRegulator": {
     "title": "Voltage Regulator Calculator",
     "description": "Calculation of resistors or voltage for LM317, LM338 or LM350 regulators.",
@@ -110,8 +115,16 @@
     "result": { "batteryLifetime": "Battery lifetime" }
   },
   "CapacitorCodeCalculator": {
-    "form": { "code": "Capacitor marking", "note": "Instead of the symbol µ, you can use the letter m" },
-    "result": { "value": "Capacitor value", "tolerance": "Tolerance", "tke": "TKE", "voltage": "Voltage" }
+    "form": {
+      "code": "Capacitor marking",
+      "note": "Instead of the symbol µ, you can use the letter m"
+    },
+    "result": {
+      "value": "Capacitor value",
+      "tolerance": "Tolerance",
+      "tke": "TKE",
+      "voltage": "Voltage"
+    }
   },
   "InductorColorCodeCalculator": {
     "form": {
@@ -156,6 +169,34 @@
     "result": {
       "value": "Resistor value",
       "resistorPowerDissipation": "Resistor power dissipation"
+    }
+  },
+  "MultivibratorCalculator": {
+    "mode": {
+      "frequency": "Frequency",
+      "components": "Components"
+    },
+    "form": {
+      "frequency": "Frequency",
+      "frequencyUnit": "Hz",
+      "dutyCycle": "Duty Cycle",
+      "dutyCycleUnit": "%",
+      "resistorA": "Resistor A",
+      "resistorAUnit": "Ом",
+      "resistorB": "Resistor B",
+      "resistorBUnit": "Ом",
+      "capacitor": "Capacitor",
+      "capacitorUnit": "µF",
+      "manualCapacitor": "Specify the capacitance of the capacitor",
+      "frequencyErrorMsg": "The frequency value cannot be less than 0.1 Hz",
+      "dutyCycleErrorMsg": "The duty cycle value should be in the range from 55% to 95%"
+    },
+    "result": {
+      "resistorA": "Resistor A",
+      "resistorB": "Resistor B",
+      "capacitor": "Capacitor",
+      "frequency": "Frequency",
+      "dutyCycle": "Duty Cycle"
     }
   },
   "VoltageRegulatorCalculator": {
