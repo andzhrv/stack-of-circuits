@@ -31,9 +31,9 @@ export const useNumberInput = (
     const parsedValue = parseNumberValue(clearedValue);
 
     if (
-      isNaN(parsedValue) &&
-      ((minValue && parsedValue < minValue) ||
-        (maxValue && parsedValue > maxValue))
+      !isNaN(parsedValue) &&
+      ((typeof minValue === 'number' && parsedValue < minValue) ||
+        (typeof maxValue === 'number' && parsedValue > maxValue))
     ) {
       return;
     }
