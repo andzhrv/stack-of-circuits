@@ -96,7 +96,7 @@ export const OperationalAmplifierCalculator = () => {
         </CardHeader>
         <CardContent>
           <Label className="block mb-4 md:mb-5">
-            {t('form.inputResistor')}
+            {t('form.inputResistor')} (R<sub>in</sub>)
             <Input
               className="mt-2"
               {...inputResistorValueProps}
@@ -104,7 +104,7 @@ export const OperationalAmplifierCalculator = () => {
             />
           </Label>
           <Label className="block mb-4 md:mb-5">
-            {t('form.feedbackResistor')}
+            {t('form.feedbackResistor')} (R<sub>fb</sub>)
             <Input
               className="mt-2"
               {...feedbackResistorValueProps}
@@ -112,7 +112,7 @@ export const OperationalAmplifierCalculator = () => {
             />
           </Label>
           <Label className="block">
-            {t('form.inputAmplitude')}
+            {t('form.inputAmplitude')} (V<sub>in</sub>)
             <Input
               className="mt-2"
               {...inputAmplitudeValueProps}

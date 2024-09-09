@@ -246,11 +246,11 @@
       "inverting": "Инвертирующий"
     },
     "form": {
-      "inputResistor": "Входной резистор (R\u202Fin)",
+      "inputResistor": "Входной резистор",
       "inputResistorUnit": "Ом",
-      "feedbackResistor": "Резистор обратной связи (R\u202Ffb)",
+      "feedbackResistor": "Резистор обратной связи",
       "feedbackResistorUnit": "Ом",
-      "inputAmplitude": "Входная амплитуда (V\u202Fin)",
+      "inputAmplitude": "Входная амплитуда",
       "inputAmplitudeUnit": "В"
     },
     "result": {

@@ -243,11 +243,11 @@
       "inverting": "Inverting"
     },
     "form": {
-      "inputResistor": "Input Resistor (R\u202Fin)",
+      "inputResistor": "Input Resistor",
       "inputResistorUnit": "Ohm",
-      "feedbackResistor": "Feedback Resistor (R\u202Ffb)",
+      "feedbackResistor": "Feedback Resistor",
       "feedbackResistorUnit": "Ohm",
-      "inputAmplitude": "Input Amplitude (V\u202Fin)",
+      "inputAmplitude": "Input Amplitude",
       "inputAmplitudeUnit": "V"
     },
     "result": {
