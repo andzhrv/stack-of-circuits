@@ -117,7 +117,7 @@
   "CapacitorCodeCalculator": {
     "form": {
       "code": "Capacitor marking",
-      "note": "Instead of the symbol µ, you can use the letter m"
+      "note": "Instead of the symbol µ, you can use the letter u"
     },
     "result": {
       "value": "Capacitor value",

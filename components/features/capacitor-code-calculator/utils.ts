@@ -2,7 +2,7 @@ export const toleranceSet = '[BCDFGJKMNQTYSZЖУДРЛИСВФОЭЮБА]';
 export const tkeSet = '[ANCHMLPRSTUVKBZDXEF]';
 
 const regExp1 = new RegExp(
-  `^(([NMµ])[1-9]\\d|[1-9]([RPNMµ])\\d|[1-9]\\d([RPNMµ]))(${toleranceSet})?(${tkeSet})?$`,
+  `^(([NMUµ])[1-9]\\d|[1-9]([RPNMUµ])\\d|[1-9]\\d([RPNMUµ]))(${toleranceSet})?(${tkeSet})?$`,
   'i'
 );
 const regExp2 = new RegExp(`^([1-9]\\d)(\\d)?(${toleranceSet})?$`, 'i');
@@ -16,6 +16,7 @@ const multiplierMap: Record<string, number> = {
   P: 0,
   N: 3,
   M: 6,
+  U: 6,
   µ: 6
 };
 
