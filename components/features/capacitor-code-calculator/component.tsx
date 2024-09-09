@@ -14,10 +14,10 @@ import { calculateCapacitorValue, tkeSet, toleranceSet } from './utils';
 const capacitorCodeValidation = (code: string) =>
   new RegExp(`^[1-9](\\d(\\d)?${toleranceSet}?)?$`, 'i').test(code) ||
   new RegExp(
-    `^[1-9](([RPNMµ](\\d${toleranceSet}?${tkeSet}?)?|\\d([RPNMµ]${toleranceSet}?${tkeSet}?)?))?$`,
+    `^[1-9](([RPNMµ](\\d(${toleranceSet}${tkeSet}?)?)?|\\d([RPNMµ](${toleranceSet}${tkeSet}?)?)?))?$`,
     'i'
   ).test(code) ||
-  new RegExp(`^[NMµ]([1-9](\\d${toleranceSet}?${tkeSet}?)?)?$`, 'i').test(
+  new RegExp(`^[NMµ]([1-9](\\d(${toleranceSet}${tkeSet}?)?)?)?$`, 'i').test(
     code
   ) ||
   new RegExp(
