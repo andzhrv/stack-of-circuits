@@ -1,0 +1,1 @@
+export { ZenerDiodeCalculator } from './component';

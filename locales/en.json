@@ -90,6 +90,11 @@
     "description": "Calculation of the voltage divider",
     "article": "## Calculation of the voltage divider\nA voltage divider is an easy way to get a lower voltage, for this you need to connect two resistors in series and take the voltage between them. To calculate the voltage divider, it is necessary to enter the nominal value of the resistors and the input voltage."
   },
+  "ZenerDiode": {
+    "title": "Resistor Calculator for Zener Diode",
+    "description": "Calculation of a resistor for a zener diode.",
+    "article": "## Calculation of a resistor for a zener diode\n\nThis calculator will help you calculate the resistor for a zener diode. For calculation, it is necessary to specify the supply voltage, the zener diode stabilization voltage, the minimum zener diode stabilization current and the current consumed by the load.\n\nThe figure below shows a diagram of a simple parametric stabilizer on a zener diode and a resistor.\n![Diagram of a parametric voltage stabilizer on a zener diode](/images/zener-diode-circuit.jpg)\nA simple parametric stabilizer is based on a semiconductor element known as a zener diode. It operates in the mode of electrical breakdown on the reverse branch of the volt-ampere characteristic, when the supply voltage changes, the current flowing through the zener diode changes, and the voltage on it remains constant.\n\nIn order for the zener diode to work correctly, it must be connected in the opposite direction."
+  },
   "ThemeToggle": {
     "trigger": "Toggle theme",
     "light": "Light",
@@ -331,6 +336,23 @@
       "resistorsUnit": "Ohm"
     },
     "result": { "outputVoltage": "Output Voltage" }
+  },
+  "ZenerDiodeCalculator": {
+    "form": {
+      "supplyVoltage": "Supply Voltage",
+      "supplyVoltageUnit": "V",
+      "stabilizationVoltage": "Stabilization Voltage",
+      "stabilizationVoltageUnit": "V",
+      "minStabilizationCurrent": "Min Stabilization Current",
+      "minStabilizationCurrentUnit": "mA",
+      "outputCurrent": "Output Current",
+      "outputCurrentUnit": "mA",
+      "supplyVoltageErrorMsg": "The supply voltage must be higher than the stabilization voltage"
+    },
+    "result": {
+      "resistorValue": "Resistor Value",
+      "powerValue": "Power"
+    }
   },
   "PopularToolsCard": { "title": "Popular tools" },
   "NotFound": { "title": "Page Not Found", "link": "Go to the home page" },

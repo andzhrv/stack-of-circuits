@@ -80,6 +80,11 @@ export const getToolsLink = async (): Promise<
       title: t('Multivibrator.title'),
       href: '/tools/multivibrator',
       description: t('Multivibrator.description')
+    },
+    {
+      title: t('ZenerDiode.title'),
+      href: '/tools/zener-diode',
+      description: t('ZenerDiode.description')
     }
   ];
 };
