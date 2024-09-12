@@ -90,6 +90,11 @@
     "description": "Calculation of the voltage divider",
     "article": "## Calculation of the voltage divider\nA voltage divider is an easy way to get a lower voltage, for this you need to connect two resistors in series and take the voltage between them. To calculate the voltage divider, it is necessary to enter the nominal value of the resistors and the input voltage."
   },
+  "WiresVoltageDrop": {
+    "title": "Wires Voltage Drop Calculator",
+    "description": "Calculation of voltage drop on wires made of various materials of a given length.",
+    "article": "## Calculation of voltage drop on wires\nThis calculator will help you calculate the voltage drop on the wires. The tool allows you to select different wire materials: copper, aluminum, gold and others."
+  },
   "ZenerDiode": {
     "title": "Resistor Calculator for Zener Diode",
     "description": "Calculation of a resistor for a zener diode.",
@@ -337,6 +342,25 @@
     },
     "result": { "outputVoltage": "Output Voltage" }
   },
+  "WiresVoltageDropCalculator": {
+    "form": {
+      "selectMaterial": "Material",
+      "wireSize": "Wire Size",
+      "wireSizeUnit": "mm\u00B2",
+      "selectVoltage": "Current",
+      "distance": "Distance To Load",
+      "distanceUnit": "m",
+      "voltage": "Voltage",
+      "voltageUnit": "V",
+      "load": "Load Current",
+      "loadUnit": "mA"
+    },
+    "result": {
+      "voltageDrop": "Voltage Drop",
+      "voltageAtEnd": "Voltage at the end of the circuit",
+      "powerLoss": "Power Loss"
+    }
+  },
   "ZenerDiodeCalculator": {
     "form": {
       "supplyVoltage": "Supply Voltage",
@@ -369,6 +393,19 @@
     "white": "White",
     "silver": "Silver",
     "gold": "Gold"
+  },
+  "materials": {
+    "copper": "Copper",
+    "aluminum": "Aluminum",
+    "silver": "Silver",
+    "gold": "Gold",
+    "iron": "Iron",
+    "nichrome": "Nichrome",
+    "tin": "Tin",
+    "nickel": "Nickel",
+    "platinum": "Platinum",
+    "brass": "Brass",
+    "tungsten": "Tungsten"
   },
   "useFormatTime": {
     "days": "d",

@@ -85,6 +85,11 @@ export const getToolsLink = async (): Promise<
       title: t('ZenerDiode.title'),
       href: '/tools/zener-diode',
       description: t('ZenerDiode.description')
+    },
+    {
+      title: t('WiresVoltageDrop.title'),
+      href: '/tools/wires-voltage-drop',
+      description: t('WiresVoltageDrop.description')
     }
   ];
 };

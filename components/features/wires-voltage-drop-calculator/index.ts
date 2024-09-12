@@ -1,0 +1,1 @@
+export { WiresVoltageDropCalculator } from './component';
