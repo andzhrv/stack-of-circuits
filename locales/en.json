@@ -65,6 +65,11 @@
     "description": "Calculation of the equivalence value of parallel resistors, capacitors and inductors",
     "article": "## Calculating the equivalence of a parallel connection\nThis calculator will help you calculate the equivalent nominal of resistors, capacitors, and inductors connected in parallel. For the calculation, select the required element and enter the values.\n\nWhen connecting capacitors in parallel, their capacitances add up. If you connect resistors or inductors in parallel, their equivalent resistance or inductance, on the contrary, decreases.\n\nConsider, for example, a resistor. If you apply a voltage to it, a certain current will flow through it. By adding another resistor parallel to the first one, you will create a new path for the current. And even if the resistance of the second resistor is large, the total current from the power supply will still be greater than the current through one resistor. And if the total current is greater, then the total equivalent resistance should be less.\n\n### Application\nUsing multiple parallel resistors allows you to create less effective resistance when there is no resistor with the desired rating. For example, if you need a 1\u202FKOhm resistance and no suitable rating is available, you can use two 2\u202FKOhm resistors connected in parallel.\n\nIn addition, the use of parallel resistors also reduces the current passing through each individual resistor in the circuit. This can be useful, for example, when connecting high-power LEDs that consume 500\u202FmW of power. If you use two higher-rated resistors connected in parallel, then only 250\u202FmW will flow through each of them, which will allow you to use standard 0.25\u202FW resistors."
   },
+  "PowerDissipation": {
+    "title": "Power Dissipation Calculator",
+    "description": "Calculation of power dissipation for serial and parallel circuits.",
+    "article": "## Calculation of power dissipation for serial and parallel circuits\nThis calculator will help you calculate the power dissipation on resistors in series or parallel connection. For calculation, it is necessary to specify the supply voltage of the circuit and the resistance values of the resistors in the circuit."
+  },
   "SeriesEquivalence": {
     "title": "Series Equivalence Calculator",
     "description": "Calculation of the equivalence value of series resistors, capacitors and inductors",
@@ -310,6 +315,23 @@
       "resistor": "Equivalent resistance",
       "capacitor": "Equivalent capacity",
       "inductor": "Equivalent inductance"
+    }
+  },
+  "PowerDissipationCalculator": {
+    "mode": {
+      "parallel": "Parallel",
+      "series": "Series"
+    },
+    "form": {
+      "supplyVoltage": "Supply Voltage",
+      "supplyVoltageUnit": "V",
+      "resistor": "Resistor",
+      "resistorUnit": "Ohm",
+      "addButton": "Add Resistor",
+      "removeButton": "Remove Resistor"
+    },
+    "result": {
+      "powerDissipation": "Power Dissipation"
     }
   },
   "ResistorColorCodeCalculator": {

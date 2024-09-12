@@ -90,6 +90,11 @@ export const getToolsLink = async (): Promise<
       title: t('WiresVoltageDrop.title'),
       href: '/tools/wires-voltage-drop',
       description: t('WiresVoltageDrop.description')
+    },
+    {
+      title: t('PowerDissipation.title'),
+      href: '/tools/power-dissipation',
+      description: t('PowerDissipation.description')
     }
   ];
 };

@@ -1,0 +1,1 @@
+export { PowerDissipationCalculator } from './component';
