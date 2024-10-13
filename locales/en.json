@@ -15,6 +15,178 @@
     "description": "A set of tools and calculators for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
   },
   "NavigationBar": { "tools": "Tools" },
+  "RaspberryPiPico": {
+    "title": "Raspberry Pi Pico Reference Guide",
+    "description": "Raspberry Pi Pico Reference, interactive pinout diagram, power connection, system control pins. Detailed information about each pin of the Raspberry Pi Pico board.",
+    "article": "### Specification\n#### CPU\nDual-core Arm Cortex-M0+ processor, flexible clock running up to 133 MHz\n\n#### Memory\n- 264kB on-chip SRAM\n- 2MB on-board QSPI flash\n\n#### Interfacing\n26 multifunction GPIO pins, including 3 analogue inputs\n\n#### Peripherals\n- 2 × UART\n- 2 × SPI controllers\n- 2 × I2C controllers\n- 16 × PWM channels\n- 1 × USB 1.1 controller and PHY, with host and device support\n- 8 × Programmable I/O (PIO) state machines\n\n\n#### Input power\n1.8–5.5V DC\n\n#### Operating temperature\n-20°C to +85°C\n\n#### Form factor\n21 mm × 51 mm\n\n",
+    "copyright": "Some content originates from the [Raspberry Pi Pico documentation](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html), and is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA) licence."
+  },
+  "RaspberryPiPicoPinout": {
+    "button": {
+      "leftSideToggle": "Pins 21-40",
+      "rightSideToggle": "Pins 1-20"
+    },
+    "pin1": {
+      "title": "General purpose I/O pin 0",
+      "description": ""
+    },
+    "pin2": {
+      "title": "General purpose I/O pin 1",
+      "description": ""
+    },
+    "pin3": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin4": {
+      "title": "General purpose I/O pin 2",
+      "description": ""
+    },
+    "pin5": {
+      "title": "General purpose I/O pin 3",
+      "description": ""
+    },
+    "pin6": {
+      "title": "General purpose I/O pin 4",
+      "description": ""
+    },
+    "pin7": {
+      "title": "General purpose I/O pin 5",
+      "description": ""
+    },
+    "pin8": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin9": {
+      "title": "General purpose I/O pin 6",
+      "description": ""
+    },
+    "pin10": {
+      "title": "General purpose I/O pin 7",
+      "description": ""
+    },
+    "pin11": {
+      "title": "General purpose I/O pin 8",
+      "description": ""
+    },
+    "pin12": {
+      "title": "General purpose I/O pin 9",
+      "description": ""
+    },
+    "pin13": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin14": {
+      "title": "General purpose I/O pin 10",
+      "description": ""
+    },
+    "pin15": {
+      "title": "General purpose I/O pin 11",
+      "description": ""
+    },
+    "pin16": {
+      "title": "General purpose I/O pin 12",
+      "description": ""
+    },
+    "pin17": {
+      "title": "General purpose I/O pin 13",
+      "description": ""
+    },
+    "pin18": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin19": {
+      "title": "General purpose I/O pin 14",
+      "description": ""
+    },
+    "pin20": {
+      "title": "General purpose I/O pin 15",
+      "description": ""
+    },
+    "pin21": {
+      "title": "General purpose I/O pin 16",
+      "description": ""
+    },
+    "pin22": {
+      "title": "General purpose I/O pin 17",
+      "description": ""
+    },
+    "pin23": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin24": {
+      "title": "General purpose I/O pin 18",
+      "description": ""
+    },
+    "pin25": {
+      "title": "General purpose I/O pin 19",
+      "description": ""
+    },
+    "pin26": {
+      "title": "General purpose I/O pin 20",
+      "description": ""
+    },
+    "pin27": {
+      "title": "General purpose I/O pin 21",
+      "description": ""
+    },
+    "pin28": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin29": {
+      "title": "General purpose I/O pin 22",
+      "description": ""
+    },
+    "pin30": {
+      "title": "RUN",
+      "description": "RUN is the RP2040 enable pin, and has an internal (on-chip) pull-up resistor to 3.3V of about ~50kΩ. To reset RP2040, short this pin low."
+    },
+    "pin31": {
+      "title": "General purpose I/O pin 26",
+      "description": ""
+    },
+    "pin32": {
+      "title": "General purpose I/O pin 27",
+      "description": ""
+    },
+    "pin33": {
+      "title": "Analog ground",
+      "description": "AGND is the ground reference for GPIO26-29, there is a separate analog ground plane running under these signals and terminating at this pin. If the ADC is not used or ADC performance is not critical, this pin can be connected to digital ground."
+    },
+    "pin34": {
+      "title": "General purpose I/O pin 28",
+      "description": ""
+    },
+    "pin35": {
+      "title": "ADC VREF",
+      "description": "ADC_VREF is the ADC power supply (and reference) voltage, and is generated on Pico by filtering the 3.3V supply. This pin can be used with an external reference if better ADC performance is required."
+    },
+    "pin36": {
+      "title": "3V3 Out",
+      "description": "3V3 is the main 3.3V supply to RP2040 and its I/O, generated by the on-board SMPS. This pin can be used to power external circuitry (maximum output current will depend on RP2040 load and VSYS voltage, it is recommended to keep the load on this pin less than 300mA)."
+    },
+    "pin37": {
+      "title": "3V3 Enable",
+      "description": "3V3_EN connects to the on-board SMPS enable pin, and is pulled high (to VSYS) via a 100kΩ resistor. To disable the 3.3V (which also de-powers the RP2040), short this pin low."
+    },
+    "pin38": {
+      "title": "Ground",
+      "description": ""
+    },
+    "pin39": {
+      "title": "VSYS",
+      "description": "VSYS is the main system input voltage, which can vary in the allowed range 1.8V to 5.5V, and is used by the on-board SMPS to generate the 3.3V for the RP2040 and its GPIO."
+    },
+    "pin40": {
+      "title": "VBUS",
+      "description": "VBUS is the micro-USB input voltage, connected to micro-USB port pin 1. This is nominally 5V (or 0V if the USB is not connected or not powered)."
+    }
+  },
   "BatteryLife": {
     "title": "Battery Life Calculator",
     "description": "Calculation of the battery life of the device from the battery or accumulator",

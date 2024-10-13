@@ -1,0 +1,1 @@
+export { RaspberryPiPicoPinout } from './component';
