@@ -33,11 +33,12 @@ const components: Partial<Components> = {
     </Title>
   ),
   h4: ({ children }) => (
-    <Title level={4} className="mb-4">
+    <Title level={4} className="mb-2">
       {children}
     </Title>
   ),
   p: ({ children }) => <Paragraph>{children}</Paragraph>,
+  ul: ({ children }) => <ul className="mb-4">{children}</ul>,
   img: ({ src, alt }) =>
     typeof src === 'string' ? (
       <Image src={src} width={300} height={200} alt={alt || ''} />
@@ -46,7 +47,7 @@ const components: Partial<Components> = {
   thead: ({ children }) => <TableHeader>{children}</TableHeader>,
   tbody: ({ children }) => <TableBody>{children}</TableBody>,
   tr: ({ children }) => <TableRow>{children}</TableRow>,
-  th: ({ children }) => <TableHead>{children}</TableHead>,
+  th: ({ children }) => (children ? <TableHead>{children}</TableHead> : null),
   td: ({ children }) => <TableCell>{children}</TableCell>
 };
 
