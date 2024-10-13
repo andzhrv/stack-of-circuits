@@ -10,7 +10,7 @@ const classNames = {
   1: 'text-2xl md:text-3xl lg:text-4xl',
   2: 'text-xl md:text-2xl',
   3: 'text-lg md:text-xl',
-  4: 'text-lg md:text-xl'
+  4: 'text-base md:text-lg'
 };
 
 const Title = forwardRef<HTMLHeadingElement, TitleProps>(
