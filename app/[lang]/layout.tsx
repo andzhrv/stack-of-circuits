@@ -44,7 +44,7 @@ const RootLayout = ({
           defer
           strategy="beforeInteractive"
           src="https://um.stackofcircuits.com/script.js"
-          data-website-id="e8747443-70f7-4f36-afc6-b0336dbc9772"
+          data-website-id="dd203098-23c0-4cae-9cac-9aa589a70064"
           data-domains="stackofcircuits.com"
         />
         <ThemeProvider
