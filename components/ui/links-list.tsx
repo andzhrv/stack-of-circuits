@@ -29,25 +29,29 @@ LinksList.displayName = 'LinksList';
 interface LinksListItemProps extends LinkProps {
   className?: string;
   title: string;
+  description: string;
   children?: ReactNode;
 }
 
 const LinksListItem = forwardRef<HTMLAnchorElement, LinksListItemProps>(
-  ({ className, title, children, ...props }, ref) => {
+  ({ className, title, description, children, ...props }, ref) => {
     return (
       <li>
         <Link
           ref={ref}
           className={cn(
-            'block h-full select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            'flex items-center h-full select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
             className
           )}
           {...props}
         >
-          <h3 className="text-sm font-medium leading-none">{title}</h3>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          {children ? <div className="basis-10 mr-2">{children}</div> : null}
+          <div>
+            <h3 className="text-sm font-medium leading-none mb-1">{title}</h3>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {description}
+            </p>
+          </div>
         </Link>
       </li>
     );

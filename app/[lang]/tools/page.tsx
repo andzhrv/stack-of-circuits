@@ -41,9 +41,14 @@ const Tools = async ({ params: { lang } }: { params: { lang: string } }) => {
     <main>
       <Title className="mb-6">{t('Tools.title')}</Title>
       <LinksList>
-        {toolsLink.map(({ title, href, description }, i) => (
-          <LinksListItem key={i} title={title} href={href}>
-            {description}
+        {toolsLink.map(({ title, href, description, Icon }, i) => (
+          <LinksListItem
+            key={i}
+            title={title}
+            description={description}
+            href={href}
+          >
+            <Icon className="w-10 h-10" stroke={1.5} />
           </LinksListItem>
         ))}
       </LinksList>
