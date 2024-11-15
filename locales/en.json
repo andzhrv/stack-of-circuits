@@ -15,6 +15,14 @@
     "description": "A set of tools and calculators for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
   },
   "NavigationBar": { "tools": "Tools" },
+  "UserFeedback": {
+    "question": "How do you like this tool?",
+    "gratitude": "Thanks for the feedback!",
+    "like": "Like",
+    "dislike": "Dislike",
+    "formQuestion": "Tell us, what can we improve?",
+    "send": "Send"
+  },
   "RaspberryPiPico": {
     "title": "Raspberry Pi Pico Reference Guide",
     "description": "Raspberry Pi Pico Reference, interactive pinout diagram, power connection, system control pins. Detailed information about each pin of the Raspberry Pi Pico board.",

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setStaticParamsLocale } from 'next-international/server';
 
 import { Article } from '@/components/entities/article';
-import { CalculatorWrapper } from '@/components/entities/calculator-wrapper';
+import { CalculatorWrapper } from '@/components/features/calculator-wrapper';
 import { VoltageDividerCalculator } from '@/components/features/voltage-divider-calculator';
 import { Title } from '@/components/ui/title';
 import { getI18n, getStaticParams } from '@/locales/server';
