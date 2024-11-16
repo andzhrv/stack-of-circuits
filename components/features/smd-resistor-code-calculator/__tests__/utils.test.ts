@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { calculateSmdResistorValue } from '../utils';
 
 describe('calculateSmdResistorValue util', () => {
