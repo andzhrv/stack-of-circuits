@@ -1,6 +1,8 @@
-import { formatUnits, Unit } from '../format-units';
+import { Unit, useFormatUnits } from '../use-format-units';
 
 describe('formatUnits util', () => {
+  const formatUnits = useFormatUnits();
+
   test('value undefined to equal "—"', () => {
     expect(formatUnits(undefined, Unit.Resistance)).toBe('\u2014');
   });

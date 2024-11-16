@@ -14,9 +14,9 @@ import {
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BandKey, useBandColors } from '@/constants/color-code';
+import { Unit, useFormatUnits } from '@/hooks/use-format-units';
 import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
-import { Unit, useFormatUnits } from '@/utils/format-units';
 
 const firstDigit: BandKey[] = [
   'brown',

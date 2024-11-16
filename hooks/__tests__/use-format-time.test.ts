@@ -1,6 +1,8 @@
-import { formatTime } from '../format-time';
+import { useFormatTime } from '../use-format-time';
 
 describe('formatTime util', () => {
+  const formatTime = useFormatTime();
+
   test('value NaN', () => {
     expect(formatTime(NaN)).toBe('\u2014');
   });

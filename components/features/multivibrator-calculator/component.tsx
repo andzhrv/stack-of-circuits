@@ -8,10 +8,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Statistic } from '@/components/ui/statistic';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Unit, useFormatUnits } from '@/hooks/use-format-units';
 import { useNumberInput } from '@/hooks/use-number-input';
 import { useTrackResultChange } from '@/hooks/use-track-result-change';
 import { useScopedI18n } from '@/locales/client';
-import { Unit, useFormatUnits } from '@/utils/format-units';
 
 import { calculateFrequencyValue, calculateResistorValue } from './utils';
 
