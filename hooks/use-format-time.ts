@@ -15,7 +15,9 @@ export const useFormatTime = () => {
     const days = Math.floor(time / 86400);
     const hours = Math.floor((time % 86400) / 3600);
     const minutes = Math.floor((time % 3600) / 60);
-    const seconds = Math.round(time % 60);
+    const seconds = withMilliseconds
+      ? Math.floor(time % 60)
+      : Math.round(time % 60);
     const milliseconds = Math.round((time % 1) * 1000);
 
     return (
