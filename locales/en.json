@@ -20,7 +20,7 @@
     "title": "Guides for Electronics & Electrical Engineering",
     "description": "Guides for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
   },
-  "NavigationBar": { "tools": "Tools" },
+  "NavigationBar": { "guides": "Guides", "tools": "Tools" },
   "UserFeedback": {
     "question": "How do you like this tool?",
     "gratitude": "Thanks for the feedback!",
