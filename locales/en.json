@@ -8,11 +8,17 @@
   },
   "Home": {
     "title": "Tools for electrical and electronics engineering",
-    "subtitle": "Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices."
+    "subtitle": "Stack of Circuits is a web application for amateurs and professionals in the field of electronics. Here you will find various calculators and tools that will help you in the calculations and design of electronic circuits and devices.",
+    "tools": "Tools",
+    "guides": "Guides"
   },
   "Tools": {
     "title": "Calculators and tools for Electronics & Electrical Engineering",
     "description": "A set of tools and calculators for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
+  },
+  "Guides": {
+    "title": "Guides for Electronics & Electrical Engineering",
+    "description": "Guides for electronic and electrical engineering that will help you in the design and development of electronic circuits and devices."
   },
   "NavigationBar": { "tools": "Tools" },
   "UserFeedback": {
