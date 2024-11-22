@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Mulish } from 'next/font/google';
 import Script from 'next/script';
 
 import { Footer } from '@/components/features/footer';
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   }
 };
 
-const inter = Inter({
+const font = Mulish({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-sans'
 });
@@ -38,7 +38,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang={lang} className="h-full" suppressHydrationWarning>
-      <body className={cn(inter.className, 'flex flex-col h-full')}>
+      <body className={cn(font.className, 'flex flex-col h-full')}>
         <Script
           id="um-counter"
           defer
