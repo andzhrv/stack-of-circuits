@@ -1,0 +1,31 @@
+on:
+  push:
+    - workflows: build-workflow
+      filter:
+        branches: ["main"]
+
+workflows:
+  build-workflow:
+    tasks:
+      - build-task
+
+tasks:
+  - name: build-task
+    cubes:
+
+      - name: types-lint-test
+        image: docker.io/library/node
+        script:
+          - npm ci
+          - npm run type-check
+          - npm run lint:ci
+          - npm run test
+      
+      - name: build-docker-image
+        script:
+          - docker build . --file Dockerfile --tag cr.yandex/crpscepi51mor3q0mqog/soc-frontend:app
+
+      - name: push-docker-image
+        script:
+          - echo '${{ secrets.YC_SA_JSON_CREDENTIALS }}' | docker login --username json_key --password-stdin cr.yandex
+          - docker push cr.yandex/crpscepi51mor3q0mqog/soc-frontend:app
