@@ -1,7 +1,27 @@
-Dockerfile
-.dockerignore
-node_modules
-npm-debug.log
-README.md
-.next
+# git and github
 .git
+.github/
+.gitignore
+
+# dependencies
+node_modules/
+
+# docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# next.js
+.next/
+
+# readme and license
+README.md
+LICENSE
+
+# production
+build/
+
+# IDE files
+.idea/
+.vscode/
+.DS_Store
