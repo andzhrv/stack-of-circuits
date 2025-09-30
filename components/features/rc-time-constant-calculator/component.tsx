@@ -142,7 +142,7 @@ export const RCTimeConstantCalculator = () => {
               title={t('result.timeConstant')}
               value={formatTime(
                 timeConstant ? timeConstant / 1000 : undefined,
-                true
+                'microseconds'
               )}
             />
           ) : null}

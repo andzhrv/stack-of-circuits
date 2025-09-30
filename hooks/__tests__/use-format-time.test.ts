@@ -87,26 +87,44 @@ describe('formatTime util', () => {
   });
 
   test('value 23.6', () => {
-    expect(formatTime(23.6, true)).toBe(
+    expect(formatTime(23.6, 'milliseconds')).toBe(
       '23\u202fseconds 600\u202fmilliseconds'
     );
   });
 
   test('value 48.9', () => {
-    expect(formatTime(48.9, true)).toBe(
+    expect(formatTime(48.9, 'milliseconds')).toBe(
       '48\u202fseconds 900\u202fmilliseconds'
     );
   });
 
   test('value 52.009', () => {
-    expect(formatTime(52.009, true)).toBe(
+    expect(formatTime(52.009, 'milliseconds')).toBe(
       '52\u202fseconds 9\u202fmilliseconds'
     );
   });
 
   test('value 68.059', () => {
-    expect(formatTime(68.059, true)).toBe(
+    expect(formatTime(68.059, 'milliseconds')).toBe(
       '1\u202fminutes 8\u202fseconds 59\u202fmilliseconds'
+    );
+  });
+
+  test('value 68.059678', () => {
+    expect(formatTime(68.059678, 'milliseconds')).toBe(
+      '1\u202fminutes 8\u202fseconds 60\u202fmilliseconds'
+    );
+  });
+
+  test('value 68.059345 with microseconds', () => {
+    expect(formatTime(68.059345, 'microseconds')).toBe(
+      '1\u202fminutes 8\u202fseconds 59\u202fmilliseconds 345\u202fmicroseconds'
+    );
+  });
+
+  test('value 68.536745 with microseconds', () => {
+    expect(formatTime(68.536745, 'microseconds')).toBe(
+      '1\u202fminutes 8\u202fseconds 536\u202fmilliseconds 745\u202fmicroseconds'
     );
   });
 });

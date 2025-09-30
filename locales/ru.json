@@ -623,7 +623,8 @@
     "hours": "ч",
     "minutes": "мин",
     "seconds": "с",
-    "milliseconds": "мс"
+    "milliseconds": "мс",
+    "microseconds": "мкс"
   },
   "useFormatUnits": {
     "voltage": "мВ.В.кВ.МВ",
