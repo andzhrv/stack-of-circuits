@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 import {
   Card,
@@ -16,6 +17,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Unit, useFormatUnits } from '@/hooks/use-format-units';
 import { useNumberInput } from '@/hooks/use-number-input';
 import { useTrackResultChange } from '@/hooks/use-track-result-change';
+import { cn } from '@/lib/utils';
 import { useScopedI18n } from '@/locales/client';
 
 import { calculateOperationalAmplifier } from './utils';
@@ -27,6 +29,8 @@ const imagesMap = {
 };
 
 export const OperationalAmplifierCalculator = () => {
+  const { resolvedTheme } = useTheme();
+
   const formatUnits = useFormatUnits();
   const t = useScopedI18n('OperationalAmplifierCalculator');
   const [valueToCalculate, setValueToCalculate] = useState<
@@ -88,6 +92,7 @@ export const OperationalAmplifierCalculator = () => {
       <Card>
         <CardHeader className="flex items-center relative h-36">
           <Image
+            className={cn({ invert: resolvedTheme === 'dark' })}
             src={`/images/${imagesMap[valueToCalculate]}`}
             fill
             style={{ objectFit: 'contain' }}
